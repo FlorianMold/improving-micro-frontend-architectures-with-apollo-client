@@ -1,0 +1,102 @@
+[
+  {
+    "id": "311549de-1372-486a-9e2a-c1fa446c7d68",
+    "email": "Henning_Naubert@hotmail.com",
+    "emailType_id": "Arbeit",
+    "contact_id": "60e60f93-54d1-4ecf-8c63-5aecd5ccc229",
+    "person_id": "0e097af0-72e0-40b6-a58a-67003a381e78",
+    "changedAt": 1667898907925,
+    "createdAt": 1663414791467,
+    "deletedAt": null
+  },
+  {
+    "id": "fd8eb2e3-1dec-4f47-85cd-2ec70c21e83a",
+    "email": "Mattes0@gmail.com",
+    "emailType_id": "Arbeit",
+    "contact_id": "e2bd2145-a67a-4731-8994-ace15c8a3cc5",
+    "person_id": "b576c891-47cc-4430-9fe1-556ac8abd477",
+    "changedAt": 1667916690337,
+    "createdAt": 1653350428128,
+    "deletedAt": null
+  },
+  {
+    "id": "e7454110-4d6b-43a5-a243-cb6f7f2a4fae",
+    "email": "Annabel51@gmail.com",
+    "emailType_id": "Arbeit",
+    "contact_id": "dc0abb07-354f-4034-885c-fcb1e063a9d9",
+    "person_id": "457d041b-6085-4f3e-8068-2ade6e9f0a05",
+    "changedAt": 1667857996405,
+    "createdAt": 1659963232779,
+    "deletedAt": null
+  },
+  {
+    "id": "fbae37f6-dd23-4c2b-ba4f-01361f296942",
+    "email": "Tim20@gmail.com",
+    "emailType_id": "Arbeit",
+    "contact_id": "4a86c1cd-8fba-4d1a-a866-8980eb00c2eb",
+    "person_id": "0854e170-f037-4c31-ab7f-34f69e155111",
+    "changedAt": 1667917306857,
+    "createdAt": 1641437099884,
+    "deletedAt": null
+  },
+  {
+    "id": "5247ea32-85e6-4a9d-b0fb-7b906692e052",
+    "email": "James_Bethke@hotmail.com",
+    "emailType_id": "Privat",
+    "contact_id": "14e5617e-1b1e-4091-868f-f94bbf1a73a9",
+    "person_id": "53292a00-924c-4b9e-85ae-2eb3405993c4",
+    "changedAt": 1667920704866,
+    "createdAt": 1663096887314,
+    "deletedAt": null
+  },
+  {
+    "id": "517ecaca-3a5d-4e06-aedb-4d575164323b",
+    "email": "Leonie_Dbel54@yahoo.com",
+    "emailType_id": "Privat",
+    "contact_id": "69ad0db5-96a6-4c37-a9f0-ec6b31035bdd",
+    "person_id": "708320f6-0843-43a9-8f6a-355a358f67a3",
+    "changedAt": 1667892950717,
+    "createdAt": 1655150990150,
+    "deletedAt": null
+  },
+  {
+    "id": "f5230134-9e58-4740-8d5d-5f00dcad9e56",
+    "email": "Zeynep3@gmail.com",
+    "emailType_id": "Arbeit",
+    "contact_id": "3c316676-6402-45f3-9bc3-dd604e28f3ad",
+    "person_id": "5a05fc69-1259-43c9-994a-40d49d1cd546",
+    "changedAt": 1667928463114,
+    "createdAt": 1665025819164,
+    "deletedAt": null
+  },
+  {
+    "id": "f7295f63-0037-4096-9444-e77973bd4b23",
+    "email": "Rania_Howard84@hotmail.com",
+    "emailType_id": "Anders",
+    "contact_id": "26310a49-3a3b-4e33-b1d1-cf4f423b4982",
+    "person_id": "8d624133-942c-4994-b686-1644b88e770c",
+    "changedAt": 1667934446488,
+    "createdAt": 1657645106041,
+    "deletedAt": null
+  },
+  {
+    "id": "54999b36-2503-43f4-93e2-51d77ba3b4c7",
+    "email": "Erik_Mai@gmail.com",
+    "emailType_id": "Privat",
+    "contact_id": "adb22eeb-8582-4ac1-a973-0bfa2f0d4e7c",
+    "person_id": "5b5cb4bd-5e73-47ce-a934-91dae790c988",
+    "changedAt": 1667922935082,
+    "createdAt": 1649750025851,
+    "deletedAt": null
+  },
+  {
+    "id": "c735c8fb-11e0-425e-a461-11f4f8b3f255",
+    "email": "Nathanael_Mgenburg52@hotmail.com",
+    "emailType_id": "Privat",
+    "contact_id": "e29d9834-0f2b-439b-8282-0c8af2167d2b",
+    "person_id": "6943e715-5f0b-40ec-9e84-f952e0048dfe",
+    "changedAt": 1667915035961,
+    "createdAt": 1643255202832,
+    "deletedAt": null
+  }
+]

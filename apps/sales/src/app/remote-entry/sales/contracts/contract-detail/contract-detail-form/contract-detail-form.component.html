@@ -1,0 +1,21 @@
+<form name="contractDetailForm" [formGroup]="_contractForm" (ngSubmit)="_handleFormSubmission()">
+  <mat-card>
+    <mat-card-content>
+      <ui-sales-contract-common
+        [uiForm]="_contractCommonForm"
+      >
+      </ui-sales-contract-common>
+      <ui-customer
+        [uiForm]="_customerForm"
+        [uiCountries]="countries"
+      >
+      </ui-customer>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <ui-form-submit>
+        <button uiFormAbortButton mat-raised-button>Abbrechen</button>
+        <button uiFormSubmitButton mat-raised-button [disabled]="_contractForm.invalid">Speichern</button>
+      </ui-form-submit>
+    </mat-card-actions>
+  </mat-card>
+</form>

@@ -1,0 +1,233 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Kontakte</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <table
+      mat-table
+      class="ui-contact-table-contacts"
+      [formGroup]="searchForm"
+      [dataSource]="_dataSource"
+      (matSortChange)="handleTableSortChange()"
+      aria-label="Kontakte"
+      matSort
+    >
+      <ng-container matColumnDef="customerNumber">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef>KNR</th>
+        <td mat-cell *matCellDef="let row">{{row.customerNumber}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="name">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let row">{{row.name}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="firstName">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef>Vorname</th>
+        <td mat-cell *matCellDef="let row">{{row.firstName}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="secondName">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef>Nachname</th>
+        <td mat-cell *matCellDef="let row">{{row.secondName}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="postalCode">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef>PLZ</th>
+        <td mat-cell *matCellDef="let row">{{row?.Address?.postalCode}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="location">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef>Ort</th>
+        <td mat-cell *matCellDef="let row">{{row?.Address?.location}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="country">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef>Land</th>
+        <td mat-cell *matCellDef="let row">{{row?.Address?.Country?.id}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="uidNumber">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef>UID</th>
+        <td mat-cell *matCellDef="let row">{{row.uidNumber}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="isCustomer">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef>Kunde</th>
+        <td mat-cell *matCellDef="let row">
+          <mat-checkbox
+            [checked]="row.isCustomer"
+            (click)="$event.preventDefault()"
+            [disableRipple]="true"
+          ></mat-checkbox>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="isSupplier">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef>Lieferant</th>
+        <td mat-cell *matCellDef="let row">
+          <mat-checkbox
+            [checked]="row.isSupplier"
+            (click)="$event.preventDefault()"
+            [disableRipple]="true"
+          ></mat-checkbox>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="isEmployee">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef>Angestellter</th>
+        <td mat-cell *matCellDef="let row">
+          <mat-checkbox
+            [checked]="row.isEmployee"
+            (click)="$event.preventDefault()"
+            [disableRipple]="true"
+          ></mat-checkbox>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="context-menu">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let row">
+          <ui-delete-dialog
+            [disabled]="_selectedRow.selected[0] === row.id"
+            uiDeleteDialogIcon="delete"
+            uiDeleteDialogButtonColor="warn"
+            [uiDeleteDialogConfig]="_deleteDialogConfig"
+            uiDeleteDialogButtonText="Löschen"
+            (uiDeleteDialogApplyClicked)="handleDeleteContactClick(row)"
+          >
+          </ui-delete-dialog>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="customNumberSearch">
+        <th mat-header-cell *matHeaderCellDef>
+          <mat-form-field class="ui-contact-table-form-field">
+            <mat-label>Kundennummer</mat-label>
+            <input matInput type="number" formControlName="customerNumberSearchInput">
+          </mat-form-field>
+        </th>
+      </ng-container>
+
+      <ng-container matColumnDef="nameSearch">
+        <th mat-header-cell *matHeaderCellDef>
+          <mat-form-field class="ui-contact-table-form-field">
+            <mat-label>Name</mat-label>
+            <input matInput type="number" formControlName="nameSearchInput">
+          </mat-form-field>
+        </th>
+      </ng-container>
+
+      <ng-container matColumnDef="firstNameSearch">
+        <th mat-header-cell *matHeaderCellDef>
+          <mat-form-field class="ui-contact-table-form-field">
+            <mat-label>Vorname</mat-label>
+            <input matInput type="text" formControlName="firstNameSearchInput">
+          </mat-form-field>
+        </th>
+      </ng-container>
+
+      <ng-container matColumnDef="secondNameSearch">
+        <th mat-header-cell *matHeaderCellDef>
+          <mat-form-field class="ui-contact-table-form-field">
+            <mat-label>Nachname</mat-label>
+            <input matInput type="text" formControlName="secondNameSearchInput">
+          </mat-form-field>
+        </th>
+      </ng-container>
+
+      <ng-container matColumnDef="uidNumberSearch">
+        <th mat-header-cell *matHeaderCellDef>
+          <mat-form-field class="ui-contact-table-form-field">
+            <mat-label>UID</mat-label>
+            <input matInput type="text" formControlName="uidNumberSearchInput">
+          </mat-form-field>
+        </th>
+      </ng-container>
+
+      <ng-container matColumnDef="postalCodeSearch">
+        <th mat-header-cell *matHeaderCellDef>
+          <mat-form-field class="ui-contact-table-form-field">
+            <mat-label>Postleitzahl</mat-label>
+            <input matInput type="text" formControlName="postalCodeSearchInput">
+          </mat-form-field>
+        </th>
+      </ng-container>
+
+      <ng-container matColumnDef="locationSearch">
+        <th mat-header-cell *matHeaderCellDef>
+          <mat-form-field class="ui-contact-table-form-field">
+            <mat-label>Stadt</mat-label>
+            <input matInput type="text" formControlName="locationSearchInput">
+          </mat-form-field>
+        </th>
+      </ng-container>
+
+      <ng-container matColumnDef="countrySearch">
+        <th mat-header-cell *matHeaderCellDef>
+          <mat-form-field class="ui-contact-table-form-field">
+            <mat-label>Land</mat-label>
+            <input matInput type="text" formControlName="countrySearchInput">
+          </mat-form-field>
+        </th>
+      </ng-container>
+
+      <ng-container matColumnDef="isCustomerSearch">
+        <th mat-header-cell *matHeaderCellDef>
+          <mat-form-field class="ui-contact-table-form-field">
+            <mat-label>Ist Kunde</mat-label>
+            <input matInput type="text" formControlName="isCustomerSearchInput">
+          </mat-form-field>
+        </th>
+      </ng-container>
+
+      <ng-container matColumnDef="isSupplierSearch">
+        <th mat-header-cell *matHeaderCellDef>
+          <mat-form-field class="ui-contact-table-form-field">
+            <mat-label>Ist Lieferant</mat-label>
+            <input matInput type="text" formControlName="isSupplierSearchInput">
+          </mat-form-field>
+        </th>
+      </ng-container>
+
+      <ng-container matColumnDef="isEmployeeSearch">
+        <th mat-header-cell *matHeaderCellDef>
+          <mat-form-field class="ui-contact-table-form-field">
+            <mat-label>Ist Angestellter</mat-label>
+            <input matInput type="text" formControlName="isEmployeeSearchInput">
+          </mat-form-field>
+        </th>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <ng-container *ngIf="displaySearchColumns">
+        <tr
+          mat-header-row
+          *matHeaderRowDef="displayedSearchColumns">
+        </tr>
+      </ng-container>
+      <tr
+        mat-row
+        (mouseover)="prefetchFormData()"
+        (click)="handleTableRowClick(row, $event)"
+        *matRowDef="let row; columns: displayedColumns"
+        [class.ui-contact-table-row-selected]="_selectedRow.selected[0] === row.id"
+        class="ui-contact-table-row"
+      >
+      </tr>
+
+      <tr *matNoDataRow class="mat-row">
+        <td colspan="11">Keine Daten gefunden</td>
+      </tr>
+
+    </table>
+    <mat-paginator
+      (page)="loadContacts($event)"
+      showFirstLastButtons
+      [pageSizeOptions]="_pageSizeOptions"
+      [pageSize]="_pageSize"
+    >
+    </mat-paginator>
+  </mat-card-content>
+</mat-card>

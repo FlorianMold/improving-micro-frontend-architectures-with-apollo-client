@@ -1,0 +1,41 @@
+<nav aria-label="primary">
+  <ul class="ui-layout-top-menu-list">
+    <li
+      class="ui-layout-top-menu-list-item"
+      *ngFor="let node of topNodes"
+      [class.ui-layout-selected-node]="node.url === currentUrl"
+    >
+      <button
+        *ngIf="!node.children"
+        class="ui-layout-top-menu-nav-link-inner"
+        mat-button
+        [routerLink]="node.url"
+        [title]="node.tooltip"
+        [class.ui-layout-top-menu-nav-active]="currentNode?.url === node.url"
+      >
+        {{node.title}}
+      </button>
+      <button
+        *ngIf="node.children"
+        class="ui-layout-top-menu-nav-link-inner"
+        mat-button
+        [matMenuTriggerFor]="menu"
+        [title]="node.tooltip"
+        [class.ui-layout-top-menu-nav-active]="currentNode?.url === node.url"
+      >
+        {{node.title}}
+        <mat-icon iconPositionEnd>arrow_drop_down</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button
+          *ngFor="let child of node.children"
+          mat-menu-item
+          [routerLink]="child.url"
+          [title]="child.tooltip"
+        >
+          {{child.title}}
+        </button>
+      </mat-menu>
+    </li>
+  </ul>
+</nav>

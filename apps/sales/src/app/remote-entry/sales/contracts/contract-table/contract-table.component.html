@@ -1,0 +1,84 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Verträge</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <table
+      mat-table
+      class="ui-sales-table-contract"
+      [dataSource]="_dataSource"
+      (matSortChange)="handleTableSortChange()"
+      aria-label="Verträge"
+      matSort
+    >
+      <ng-container matColumnDef="contractNumber">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef>Vertragsnr.</th>
+        <td mat-cell *matCellDef="let row">{{row.id}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="name">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let row">{{row.name}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="contractor">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef>Auftragnehmer</th>
+        <td mat-cell *matCellDef="let row">{{row.contractor}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="modifierName">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef>Bearbeiter</th>
+        <td mat-cell *matCellDef="let row">{{row.Client.name}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="customerName">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef>Kundenname</th>
+        <td mat-cell *matCellDef="let row">{{row.Customer.name}} {{row.Customer.name2}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="customerCountry">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef>Kundenland</th>
+        <td mat-cell *matCellDef="let row">{{row.Customer.SalesCountry.shortName}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="context-menu">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let row">
+          <ui-delete-dialog
+            [disabled]="_selectedRow.selected[0] === row.id"
+            uiDeleteDialogIcon="delete"
+            uiDeleteDialogButtonColor="warn"
+            [uiDeleteDialogConfig]="_deleteDialogConfig"
+            uiDeleteDialogButtonText="Löschen"
+            (uiDeleteDialogApplyClicked)="handleDeleteContractClick(row)"
+          >
+          </ui-delete-dialog>
+        </td>
+
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr
+        mat-row
+        (mouseover)="prefetchFormData()"
+        (click)="handleTableRowClick(row, $event)"
+        *matRowDef="let row; columns: displayedColumns"
+        [class.ui-sales-table-contract-row-selected]="_selectedRow.selected[0] === row.id"
+        class="ui-sales-table-contract-row"
+      >
+      </tr>
+
+      <tr *matNoDataRow class="mat-row">
+        <td colspan="11">Keine Daten gefunden</td>
+      </tr>
+
+    </table>
+    <mat-paginator
+      (page)="loadContracts($event)"
+      showFirstLastButtons
+      [pageSizeOptions]="_pageSizeOptions"
+      [pageSize]="_pageSize"
+    >
+    </mat-paginator>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,24 @@
+<ui-layout-main-content
+  [(uiLayoutFirstColSpan)]="_firstColSpan"
+  [(uiLayoutSecondColSpan)]="_secondColSpan"
+  [(uiLayoutThirdColSpan)]="_thirdColSpan"
+>
+  <div uiLayoutMainFirstSection>
+    <router-outlet></router-outlet>
+  </div>
+  <div uiLayoutMainSecondSection>
+    <router-outlet
+      name="detail-outlet"
+      (activate)="handleDetailOutletActivated()"
+      (deactivate)="handleDetailOutletDeactivated()"
+    ></router-outlet>
+  </div>
+  <div uiLayoutMainThirdSection *ngIf="showThirdColumn">
+    <router-outlet
+      name="document-outlet"
+      (activate)="handleDocumentOutletActivated()"
+      (deactivate)="handleDocumentOutletDeactivated()"
+    >
+    </router-outlet>
+  </div>
+</ui-layout-main-content>

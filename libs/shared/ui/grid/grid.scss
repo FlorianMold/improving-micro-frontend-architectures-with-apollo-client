@@ -1,0 +1,99 @@
+
+@mixin generateGrid($columns, $class: '') {
+  @for $i from 1 through $gridColumns {
+    .ui-grid-col#{$class}-#{$i} {
+      display: block;
+      flex: 0 0 percentage(calc($i / $gridColumns));
+      max-width: percentage(calc($i / $gridColumns));
+    }
+
+    .ui-grid-col#{$class}-offset-#{$i} {
+      margin-left: percentage(calc($i / $gridColumns));
+    }
+
+    .ui-grid-col#{$class}-order-#{$i} {
+      order: $i;
+    }
+  }
+}
+
+
+.ui-grid-row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  &::before,
+  &::after {
+    display: flex;
+  }
+
+  &-no-wrap {
+    flex-wrap: nowrap;
+  }
+}
+
+.ui-grid-row-start {
+  justify-content: flex-start;
+}
+
+.ui-grid-row-end {
+  justify-content: flex-end;
+}
+
+.ui-grid-row-space-between {
+  justify-content: space-between;
+}
+
+.ui-grid-row-space-around {
+  justify-content: space-around;
+}
+
+.ui-grid-row-space-evenly {
+  justify-content: space-evenly;
+}
+
+.ui-grid-row-top {
+  align-items: flex-start;
+}
+
+.ui-grid-row-middle {
+  align-items: center;
+}
+
+.ui-grid-row-bottom {
+  align-items: flex-end;
+}
+
+.ui-grid-col {
+  position: relative;
+  max-width: 100%;
+  min-height: 1px;
+}
+
+// Our grid contains 24 columns.
+$gridColumns: 24;
+
+@include generateGrid($gridColumns);
+
+@include generateGrid($gridColumns, '-xs');
+
+@media (min-width: 576px) {
+  @include generateGrid('-sm');
+}
+
+@media (min-width: 768px) {
+  @include generateGrid('-md');
+}
+
+@media (min-width: 992px) {
+  @include generateGrid('-lg');
+}
+
+@media (min-width: 1200px) {
+  @include generateGrid('-xl');
+}
+
+@media (min-width: 1600px) {
+  @include generateGrid('-xxl');
+}

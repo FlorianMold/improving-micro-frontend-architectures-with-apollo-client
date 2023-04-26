@@ -1,0 +1,34 @@
+<div class="ui-layout-container" [class.ui-layout-second-toolbar-row]="_secondToolbarRowNavigationNodes$ | async">
+  <ui-layout-header
+    (uiLayoutToggleSideNav)="sideNav.toggle()"
+    [uiLayoutToggleButton]="disableSidenav"
+    [uiLayoutCurrentNode]="currentNodes?.['TopBar']"
+  >
+  </ui-layout-header>
+
+  <mat-sidenav-container class="ui-layout-sidenav-container" role="main">
+    <mat-sidenav
+      role="main"
+      #sideNav
+      class="ui-layout-sidenav"
+      [mode]="drawerMode"
+      [opened]="!disableSidenav"
+      (openedChange)="openedChange.emit($event)"
+    >
+      <ui-layout-nav-list
+        [uiLayoutNavLabel]="'Main Navigation'"
+        [uiLayoutNavigationNodes]="leftNodes"
+        [uiLayoutCurrentNode]="currentNodes?.['SideNav']"
+      >
+      </ui-layout-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <section class="ui-layout-sidenav-content-container">
+        <ng-content select="ui-layout-main-content"></ng-content>
+      </section>
+    </mat-sidenav-content>
+
+    <ui-layout-footer>Footer</ui-layout-footer>
+  </mat-sidenav-container>
+</div>

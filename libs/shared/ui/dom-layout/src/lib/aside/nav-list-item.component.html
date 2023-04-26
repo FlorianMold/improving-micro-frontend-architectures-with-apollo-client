@@ -1,0 +1,43 @@
+<div *ngIf="!node.children">
+  <a class="ui-layout-vertical-menu-item" [routerLink]="node.url" [ngClass]="classes" [title]="node.tooltip">
+    <span class="ui-layout-vertical-menu-title">{{ node.title }}</span>
+  </a>
+</div>
+
+<div *ngIf="node.children">
+  <a
+    *ngIf="node.url"
+    class="ui-layout-vertical-menu-item ui-layout-heading"
+    [routerLink]="node.url"
+    [ngClass]="classes"
+    [title]="node.tooltip"
+    (click)="headerClicked()"
+  >
+    <span class="ui-layout-vertical-menu-title">{{ node.title }}</span>
+    <mat-icon class="ui-layout-vertical-menu-rotating-icon">arrow_right</mat-icon>
+  </a>
+  <button
+    *ngIf="!node.url"
+    type="button"
+    class="ui-layout-vertical-menu-item ui-layout-heading"
+    [ngClass]="classes"
+    [title]="node.tooltip"
+    (click)="headerClicked()"
+    [attr.aria-pressed]="isExpanded"
+  >
+    <span class="ui-layout-vertical-menu-title">{{ node.title }}</span>
+    <mat-icon class="ui-layout-vertical-menu-rotating-icon">arrow_right</mat-icon>
+  </button>
+
+  <div class="ui-layout-navigation-heading-children" [ngClass]="classes">
+    <ui-layout-nav-list-item
+      *ngFor="let node of nodeChildren"
+      [uiLayoutNavigationLevel]="level + 1"
+      [uiLayoutNavigationIsWide]="isWide"
+      [uiLayoutIsParentExpanded]="isExpanded"
+      [uiLayoutNavigationNode]="node"
+      [uiLayoutSelectedNodes]="selectedNodes"
+    >
+    </ui-layout-nav-list-item>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+{
+  "name": "shared-ui-resizable",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/shared/ui/resizable/src",
+  "prefix": "ui-resizeable",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/libs/shared/ui/resizable"],
+      "options": {
+        "project": "libs/shared/ui/resizable/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/shared/ui/resizable/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/shared/ui/resizable/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/shared/ui/resizable"],
+      "options": {
+        "jestConfig": "libs/shared/ui/resizable/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/shared/ui/resizable/**/*.ts", "libs/shared/ui/resizable/**/*.html"]
+      }
+    }
+  },
+  "tags": ["scope:lib-shared", "scope:lib-shared-ui"]
+}

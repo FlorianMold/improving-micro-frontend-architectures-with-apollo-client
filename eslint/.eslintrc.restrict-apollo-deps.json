@@ -1,0 +1,21 @@
+{
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "rules": {
+        "no-restricted-imports": [ "error", {
+          "patterns": [
+            {
+              "group": ["@apollo/*"],
+              "message": "Consider accessing the Apollo-API via 'graphql-client-types' or 'graphql-client-options'."
+            },
+            {
+              "group": ["apollo-angular", "apollo-angular/*"],
+              "message": "Consider accessing the Apollo-Angular-API via 'graphql-client-types' or 'graphql-client-options'."
+            }
+          ]
+        }]
+      }
+    }
+  ]
+}

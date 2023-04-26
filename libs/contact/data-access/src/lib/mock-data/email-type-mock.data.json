@@ -1,0 +1,20 @@
+[
+  {
+    "id": "Privat",
+    "changedAt": 1667914670213,
+    "createdAt": 1652622672423,
+    "deletedAt": null
+  },
+  {
+    "id": "Arbeit",
+    "changedAt": 1667908439732,
+    "createdAt": 1641777264825,
+    "deletedAt": null
+  },
+  {
+    "id": "Anders",
+    "changedAt": 1667923400039,
+    "createdAt": 1662757235387,
+    "deletedAt": null
+  }
+]

@@ -1,0 +1,9 @@
+<ui-contact-detail-form
+  [uiContact]="(contact$ | async)?.Contact"
+  [uiTitles]="(allTitles$ | async)?.allTitles"
+  [uiCountries]="(allCountries$ | async)?.allCountries"
+  [uiSalutations]="(allSalutations$ | async)?.allSalutations"
+  (uiCreateContact)="handleCreateContact($event)"
+  (uiUpdateContact)="handleUpdateContact($event)"
+>
+</ui-contact-detail-form>

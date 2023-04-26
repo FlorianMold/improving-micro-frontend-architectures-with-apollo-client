@@ -1,0 +1,26 @@
+[
+  {
+    "id": "CASH",
+    "changedAt": 1670552942894,
+    "createdAt": 1640210888375,
+    "deletedAt": null
+  },
+  {
+    "id": "CREDIT",
+    "changedAt": 1670506672645,
+    "createdAt": 1656895677347,
+    "deletedAt": null
+  },
+  {
+    "id": "DEBIT",
+    "changedAt": 1670538449233,
+    "createdAt": 1654558461273,
+    "deletedAt": null
+  },
+  {
+    "id": "BANK_TRANSFER",
+    "changedAt": 1670581458130,
+    "createdAt": 1648647712626,
+    "deletedAt": null
+  }
+]

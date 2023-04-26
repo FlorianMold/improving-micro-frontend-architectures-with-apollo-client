@@ -1,0 +1,21 @@
+:host {
+  display: block;
+  height: 100%;
+}
+
+.ui-dashboard-invoice-widget-card {
+  height: inherit;
+}
+
+.ui-dashboard-invoice-widget-mat-list {
+  max-height: 400px;
+  overflow: auto;
+
+  &-item {
+    &:hover {
+      background-color: grey;
+      border-color: currentColor;
+      cursor: pointer;
+    }
+  }
+}

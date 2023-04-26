@@ -1,0 +1,64 @@
+<form
+  [formGroup]=" _loginForm"
+  (ngSubmit)="login()"
+>
+  <mat-card>
+    <mat-card-header>
+      <h1>Login</h1>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="ui-login-controls">
+        <mat-form-field>
+          <mat-label>E-Mail</mat-label>
+          <input matInput placeholder="E-Mail" formControlName="email">
+          <mat-error *ngIf="_loginForm.controls.email.touched && _loginForm.controls.email.hasError('required')">
+            E-Mail ist ein Pflichtfeld.
+          </mat-error>
+          <mat-error *ngIf="_loginForm.controls.email.touched && _loginForm.controls.email.hasError('email')">
+            E-Mail ist ungültig.
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Passwort</mat-label>
+          <input
+            matInput
+            placeholder="Passwort"
+            [type]="_hidePassword ? 'password' : 'text'"
+            formControlName="password"
+          >
+          <mat-icon
+            matSuffix
+            (click)="_hidePassword = !_hidePassword"
+          >
+            {{_hidePassword ? 'visibility_off' : 'visibility'}}
+          </mat-icon>
+          <mat-error
+            *ngIf="_loginForm.controls.password.touched && _loginForm.controls.password.hasError('required')">
+            Passwort ist ein Pflichtfeld.
+          </mat-error>
+        </mat-form-field>
+
+        <mat-checkbox formControlName="stayLoggedIn">Eingeloggt bleiben</mat-checkbox>
+      </div>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <ui-form-submit>
+        <button
+          uiFormAbortButton
+          mat-raised-button
+          (click)="cancel.emit()"
+        >
+          Abbrechen
+        </button>
+        <button
+          uiFormSubmitButton
+          mat-raised-button
+          [disabled]="!_loginForm.valid"
+        >
+          Anmelden
+        </button>
+      </ui-form-submit>
+    </mat-card-actions>
+  </mat-card>
+</form>

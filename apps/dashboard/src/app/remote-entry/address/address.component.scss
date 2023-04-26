@@ -1,0 +1,24 @@
+:host {
+  display: block;
+  height: 100%;
+}
+
+.ui-dashboard-address-widget-card {
+  height: inherit;
+}
+
+.ui-dashboard-address-widget-spacer {
+  margin-top: 2rem;
+}
+
+.ui-dashboard-address-widget-mat-list {
+  max-height: 400px;
+  overflow: auto;
+
+  &-item {
+    &:hover {
+      background-color: grey;
+      border-color: currentColor;
+    }
+  }
+}

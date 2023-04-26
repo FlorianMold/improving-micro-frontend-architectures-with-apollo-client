@@ -1,0 +1,40 @@
+{
+  "name": "shared-feature-common-services",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/shared/feature/common-services/src",
+  "prefix": "ui-common-service",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/libs/shared/feature/common-services"],
+      "options": {
+        "project": "libs/shared/feature/common-services/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/shared/feature/common-services/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/shared/feature/common-services/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/shared/feature/common-services"],
+      "options": {
+        "jestConfig": "libs/shared/feature/common-services/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/shared/feature/common-services/**/*.ts", "libs/shared/feature/common-services/**/*.html"]
+      }
+    }
+  },
+  "tags": ["scope:lib-shared", "scope:lib-shared-feature"]
+}

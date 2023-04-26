@@ -1,0 +1,192 @@
+<form [formGroup]="_contactForm" (ngSubmit)="_insertContact()">
+  <mat-card>
+    <mat-card-content>
+      <div class="ui-sub-form-header">
+        <h2>Kontakt</h2>
+      </div>
+      <div class="ui-sub-form-main">
+        <div uiGridRow>
+          <div uiGridCol uiGridColSpan="11">
+            <mat-form-field>
+              <mat-label>KNR</mat-label>
+              <input matInput type="number" formControlName="customerNumber">
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-label>Anrede</mat-label>
+              <mat-select formControlName="salutation">
+                <mat-option *ngFor="let salutation of salutations" [value]="salutation.id">
+                  {{salutation.id}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-label>Titel</mat-label>
+              <mat-select formControlName="title">
+                <mat-option *ngFor="let title of titles" [value]="title.id">
+                  {{title.id}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-label>Name</mat-label>
+              <input matInput formControlName="name">
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-label>Name 2</mat-label>
+              <input matInput formControlName="name2">
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-label>Strasse</mat-label>
+              <input matInput formControlName="streetName">
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-label>PLZ</mat-label>
+              <input matInput formControlName="postalCode">
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-label>Ort</mat-label>
+              <input matInput formControlName="location">
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-label>Land</mat-label>
+              <mat-select formControlName="country">
+                <mat-option *ngFor="let country of countries" [value]="country.id">
+                  {{country.id}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-label>Telefon</mat-label>
+              <input matInput formControlName="phone">
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-label>Handy</mat-label>
+              <input matInput formControlName="mobilePhone">
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-label>Fax</mat-label>
+              <input matInput formControlName="fax">
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-label>E-Mail</mat-label>
+              <input matInput formControlName="email">
+            </mat-form-field>
+
+            <p>
+              <mat-checkbox formControlName="isCustomer" labelPosition="before">Ist Kunde:</mat-checkbox>
+            </p>
+            <p>
+              <mat-checkbox formControlName="isSupplier" labelPosition="before">Ist Lieferant:</mat-checkbox>
+            </p>
+            <p>
+              <mat-checkbox formControlName="isEmployee" labelPosition="before">Ist Personal:</mat-checkbox>
+            </p>
+            <p>
+              <mat-checkbox formControlName="billByEmail" labelPosition="before">Rechnung per E-Mail:</mat-checkbox>
+            </p>
+
+            <mat-form-field>
+              <mat-label>UID-Nummer</mat-label>
+              <input matInput formControlName="uidNumber">
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-label>MWST</mat-label>
+              <input matInput formControlName="valueAddedTax">
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-label>Zahlungsfrist</mat-label>
+              <input matInput type="number" formControlName="paymentDeadline">
+            </mat-form-field>
+          </div>
+          <div uiGridCol uiGridColOffset="2" uiGridColSpan="11">
+            <p>
+              <mat-checkbox formControlName="bankWithdrawal" labelPosition="before">Bankeinzug:</mat-checkbox>
+            </p>
+
+            <mat-form-field>
+              <mat-label>Kontoinhaber</mat-label>
+              <input matInput formControlName="accountHolder">
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-label>Bank</mat-label>
+              <input matInput formControlName="bankName">
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-label>Bankleitzahl</mat-label>
+              <input matInput formControlName="bankCode">
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-label>IBAN</mat-label>
+              <input matInput formControlName="iban">
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-label>SWIFT(BIC)</mat-label>
+              <input matInput formControlName="bic">
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-label>Creditor ID</mat-label>
+              <input matInput formControlName="creditor">
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-label>Dateiordner</mat-label>
+              <input matInput formControlName="dataFolder">
+            </mat-form-field>
+
+            <mat-form-field>
+              <mat-label>E-Mail News</mat-label>
+              <input matInput formControlName="newsletter">
+            </mat-form-field>
+
+            <p>
+              <mat-checkbox formControlName="dunning" labelPosition="before">Mahnsperre:</mat-checkbox>
+            </p>
+
+            <mat-form-field appearance="fill">
+              <mat-label>Sonstiges</mat-label>
+              <textarea class="ui-contact-detail-textarea" matInput [rows]="10" formControlName="comment"></textarea>
+            </mat-form-field>
+
+            <button mat-flat-button type="button" color="primary" (click)="_handleToggleDocument()">Dokument</button>
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <ui-form-submit>
+        <button
+          uiFormAbortButton
+          mat-raised-button
+          (click)="_handleAbortButtonClick()"
+        >
+          Abbrechen
+        </button>
+        <button
+          uiFormSubmitButton
+          mat-raised-button
+        >
+          Speichern
+        </button>
+      </ui-form-submit>
+    </mat-card-actions>
+  </mat-card>
+</form>

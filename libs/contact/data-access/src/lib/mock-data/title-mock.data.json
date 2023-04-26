@@ -1,0 +1,506 @@
+[
+  {
+    "id": "B. phil.",
+    "changedAt": 1667898666526,
+    "createdAt": 1653812144672,
+    "deletedAt": null
+  },
+  {
+    "id": "B. rer. nat.",
+    "changedAt": 1667930250222,
+    "createdAt": 1665745106651,
+    "deletedAt": null
+  },
+  {
+    "id": "B.Ac.",
+    "changedAt": 1667926473246,
+    "createdAt": 1664240725646,
+    "deletedAt": null
+  },
+  {
+    "id": "B.B.A.",
+    "changedAt": 1667878966112,
+    "createdAt": 1665958963023,
+    "deletedAt": null
+  },
+  {
+    "id": "B.chin.Pharm.",
+    "changedAt": 1667929777050,
+    "createdAt": 1651434917590,
+    "deletedAt": null
+  },
+  {
+    "id": "B.Eng.",
+    "changedAt": 1667933205404,
+    "createdAt": 1666170679483,
+    "deletedAt": null
+  },
+  {
+    "id": "B.Tui.",
+    "changedAt": 1667920251300,
+    "createdAt": 1655466597307,
+    "deletedAt": null
+  },
+  {
+    "id": "BA",
+    "changedAt": 1667928530923,
+    "createdAt": 1653107015394,
+    "deletedAt": null
+  },
+  {
+    "id": "Bakk.",
+    "changedAt": 1667869435268,
+    "createdAt": 1642911354863,
+    "deletedAt": null
+  },
+  {
+    "id": "Bakk. (FH)",
+    "changedAt": 1667856901145,
+    "createdAt": 1651611774882,
+    "deletedAt": null
+  },
+  {
+    "id": "BEd",
+    "changedAt": 1667928296654,
+    "createdAt": 1659855950534,
+    "deletedAt": null
+  },
+  {
+    "id": "BSc",
+    "changedAt": 1667898287523,
+    "createdAt": 1666016814033,
+    "deletedAt": null
+  },
+  {
+    "id": "Dipl.-Bw. (FH)",
+    "changedAt": 1667918828040,
+    "createdAt": 1662097345820,
+    "deletedAt": null
+  },
+  {
+    "id": "Dipl.-Dolm.",
+    "changedAt": 1667920306639,
+    "createdAt": 1663161565330,
+    "deletedAt": null
+  },
+  {
+    "id": "Dipl.-HLFL-Ing.",
+    "changedAt": 1667911671266,
+    "createdAt": 1654519285536,
+    "deletedAt": null
+  },
+  {
+    "id": "Dipl.-HTL-Ing.",
+    "changedAt": 1667871813333,
+    "createdAt": 1659465153906,
+    "deletedAt": null
+  },
+  {
+    "id": "Dipl.-Ing.",
+    "changedAt": 1667915476341,
+    "createdAt": 1667440051722,
+    "deletedAt": null
+  },
+  {
+    "id": "Dipl.-Ing. (FH)",
+    "changedAt": 1667930460020,
+    "createdAt": 1650910176151,
+    "deletedAt": null
+  },
+  {
+    "id": "Dipl.-Kffr.",
+    "changedAt": 1667881142862,
+    "createdAt": 1665222393253,
+    "deletedAt": null
+  },
+  {
+    "id": "Dipl.-Kfm.",
+    "changedAt": 1667875647146,
+    "createdAt": 1648751255883,
+    "deletedAt": null
+  },
+  {
+    "id": "Dipl.-Päd.",
+    "changedAt": 1667897232277,
+    "createdAt": 1650432884504,
+    "deletedAt": null
+  },
+  {
+    "id": "Dipl.-Vw.",
+    "changedAt": 1667882711794,
+    "createdAt": 1643997549324,
+    "deletedAt": null
+  },
+  {
+    "id": "Dr.",
+    "changedAt": 1667892589971,
+    "createdAt": 1660981108528,
+    "deletedAt": null
+  },
+  {
+    "id": "EMHRD",
+    "changedAt": 1667886692559,
+    "createdAt": 1665809338782,
+    "deletedAt": null
+  },
+  {
+    "id": "EMLE",
+    "changedAt": 1667935282290,
+    "createdAt": 1650589056292,
+    "deletedAt": null
+  },
+  {
+    "id": "Exec. MBA",
+    "changedAt": 1667927398178,
+    "createdAt": 1667432806934,
+    "deletedAt": null
+  },
+  {
+    "id": "Ing.",
+    "changedAt": 1667916126837,
+    "createdAt": 1665560264787,
+    "deletedAt": null
+  },
+  {
+    "id": "Int. MLE",
+    "changedAt": 1667922841387,
+    "createdAt": 1666377183704,
+    "deletedAt": null
+  },
+  {
+    "id": "jun",
+    "changedAt": 1667919792162,
+    "createdAt": 1639309296761,
+    "deletedAt": null
+  },
+  {
+    "id": "Lic. theol.",
+    "changedAt": 1667856108918,
+    "createdAt": 1663388945073,
+    "deletedAt": null
+  },
+  {
+    "id": "LL.M.",
+    "changedAt": 1667864940186,
+    "createdAt": 1643534798747,
+    "deletedAt": null
+  },
+  {
+    "id": "LLB",
+    "changedAt": 1667870792480,
+    "createdAt": 1645318405050,
+    "deletedAt": null
+  },
+  {
+    "id": "M.A.I.S.",
+    "changedAt": 1667918797899,
+    "createdAt": 1662422610033,
+    "deletedAt": null
+  },
+  {
+    "id": "M.Ac.",
+    "changedAt": 1667856785981,
+    "createdAt": 1659226871906,
+    "deletedAt": null
+  },
+  {
+    "id": "M.B.A.",
+    "changedAt": 1667880847098,
+    "createdAt": 1660790535490,
+    "deletedAt": null
+  },
+  {
+    "id": "M.B.L.",
+    "changedAt": 1667886814691,
+    "createdAt": 1662822363936,
+    "deletedAt": null
+  },
+  {
+    "id": "M.chin.Pharm.",
+    "changedAt": 1667878345205,
+    "createdAt": 1665997126072,
+    "deletedAt": null
+  },
+  {
+    "id": "M.E.S.",
+    "changedAt": 1667884737332,
+    "createdAt": 1657471833860,
+    "deletedAt": null
+  },
+  {
+    "id": "M.Ed.",
+    "changedAt": 1667856956420,
+    "createdAt": 1654972098930,
+    "deletedAt": null
+  },
+  {
+    "id": "M.TCM.",
+    "changedAt": 1667891643387,
+    "createdAt": 1649727920088,
+    "deletedAt": null
+  },
+  {
+    "id": "M.Theol.",
+    "changedAt": 1667859903375,
+    "createdAt": 1646705385147,
+    "deletedAt": null
+  },
+  {
+    "id": "M.Tui.",
+    "changedAt": 1667929437186,
+    "createdAt": 1663353091328,
+    "deletedAt": null
+  },
+  {
+    "id": "MA",
+    "changedAt": 1667863235566,
+    "createdAt": 1658762560884,
+    "deletedAt": null
+  },
+  {
+    "id": "MA. rer. nat.",
+    "changedAt": 1667865249584,
+    "createdAt": 1666124387838,
+    "deletedAt": null
+  },
+  {
+    "id": "Mag.",
+    "changedAt": 1667903890564,
+    "createdAt": 1643407602506,
+    "deletedAt": null
+  },
+  {
+    "id": "Mag. (FH)",
+    "changedAt": 1667908186045,
+    "createdAt": 1650121028891,
+    "deletedAt": null
+  },
+  {
+    "id": "Mag. med. vet.",
+    "changedAt": 1667889594639,
+    "createdAt": 1649905418407,
+    "deletedAt": null
+  },
+  {
+    "id": "MArch",
+    "changedAt": 1667890403723,
+    "createdAt": 1651886739293,
+    "deletedAt": null
+  },
+  {
+    "id": "MAS",
+    "changedAt": 1667907601784,
+    "createdAt": 1645796656243,
+    "deletedAt": null
+  },
+  {
+    "id": "Mastère",
+    "changedAt": 1667916402115,
+    "createdAt": 1661632391451,
+    "deletedAt": null
+  },
+  {
+    "id": "MBA",
+    "changedAt": 1667891811752,
+    "createdAt": 1645250176224,
+    "deletedAt": null
+  },
+  {
+    "id": "MCoach",
+    "changedAt": 1667880908465,
+    "createdAt": 1642310472541,
+    "deletedAt": null
+  },
+  {
+    "id": "MDes",
+    "changedAt": 1667900306930,
+    "createdAt": 1664826557421,
+    "deletedAt": null
+  },
+  {
+    "id": "MDSc",
+    "changedAt": 1667889870261,
+    "createdAt": 1664692961505,
+    "deletedAt": null
+  },
+  {
+    "id": "MEM",
+    "changedAt": 1667900274197,
+    "createdAt": 1652453742237,
+    "deletedAt": null
+  },
+  {
+    "id": "MEng",
+    "changedAt": 1667925520832,
+    "createdAt": 1664239410375,
+    "deletedAt": null
+  },
+  {
+    "id": "MFA",
+    "changedAt": 1667857811319,
+    "createdAt": 1661134651758,
+    "deletedAt": null
+  },
+  {
+    "id": "MFP",
+    "changedAt": 1667881168095,
+    "createdAt": 1662550392054,
+    "deletedAt": null
+  },
+  {
+    "id": "MIB",
+    "changedAt": 1667895026807,
+    "createdAt": 1645075276998,
+    "deletedAt": null
+  },
+  {
+    "id": "MIBI",
+    "changedAt": 1667916002963,
+    "createdAt": 1641692493252,
+    "deletedAt": null
+  },
+  {
+    "id": "MIM",
+    "changedAt": 1667886959544,
+    "createdAt": 1661019110945,
+    "deletedAt": null
+  },
+  {
+    "id": "mj",
+    "changedAt": 1667908873414,
+    "createdAt": 1638588533842,
+    "deletedAt": null
+  },
+  {
+    "id": "MLE",
+    "changedAt": 1667931360927,
+    "createdAt": 1648358037067,
+    "deletedAt": null
+  },
+  {
+    "id": "MLL",
+    "changedAt": 1667893279925,
+    "createdAt": 1637327071148,
+    "deletedAt": null
+  },
+  {
+    "id": "MLS",
+    "changedAt": 1667915650259,
+    "createdAt": 1641925048829,
+    "deletedAt": null
+  },
+  {
+    "id": "MMedScAA",
+    "changedAt": 1667866119764,
+    "createdAt": 1653510365552,
+    "deletedAt": null
+  },
+  {
+    "id": "MPA",
+    "changedAt": 1667900368349,
+    "createdAt": 1659958268507,
+    "deletedAt": null
+  },
+  {
+    "id": "MPC",
+    "changedAt": 1667923746350,
+    "createdAt": 1662651318269,
+    "deletedAt": null
+  },
+  {
+    "id": "MPH",
+    "changedAt": 1667936625454,
+    "createdAt": 1652110560514,
+    "deletedAt": null
+  },
+  {
+    "id": "MPM",
+    "changedAt": 1667899603006,
+    "createdAt": 1649533003075,
+    "deletedAt": null
+  },
+  {
+    "id": "MPOS",
+    "changedAt": 1667892132403,
+    "createdAt": 1652032124145,
+    "deletedAt": null
+  },
+  {
+    "id": "MSc",
+    "changedAt": 1667906882361,
+    "createdAt": 1667605846440,
+    "deletedAt": null
+  },
+  {
+    "id": "MScMF",
+    "changedAt": 1667902595768,
+    "createdAt": 1658979278712,
+    "deletedAt": null
+  },
+  {
+    "id": "MSD",
+    "changedAt": 1667877988361,
+    "createdAt": 1664372126177,
+    "deletedAt": null
+  },
+  {
+    "id": "MSPT",
+    "changedAt": 1667898508460,
+    "createdAt": 1667539299740,
+    "deletedAt": null
+  },
+  {
+    "id": "Mst.",
+    "changedAt": 1667915586524,
+    "createdAt": 1639387648389,
+    "deletedAt": null
+  },
+  {
+    "id": "MTox",
+    "changedAt": 1667881645398,
+    "createdAt": 1657632826081,
+    "deletedAt": null
+  },
+  {
+    "id": "P LL.M",
+    "changedAt": 1667863119931,
+    "createdAt": 1664161558378,
+    "deletedAt": null
+  },
+  {
+    "id": "PhD",
+    "changedAt": 1667887784173,
+    "createdAt": 1661067979281,
+    "deletedAt": null
+  },
+  {
+    "id": "PMM",
+    "changedAt": 1667860749039,
+    "createdAt": 1666009888006,
+    "deletedAt": null
+  },
+  {
+    "id": "PMPB",
+    "changedAt": 1667856559642,
+    "createdAt": 1653586565887,
+    "deletedAt": null
+  },
+  {
+    "id": "PMPH",
+    "changedAt": 1667855589104,
+    "createdAt": 1636642993209,
+    "deletedAt": null
+  },
+  {
+    "id": "sen",
+    "changedAt": 1667903053140,
+    "createdAt": 1659627422652,
+    "deletedAt": null
+  },
+  {
+    "id": "Tzt.",
+    "changedAt": 1667852938178,
+    "createdAt": 1647207838829,
+    "deletedAt": null
+  }
+]

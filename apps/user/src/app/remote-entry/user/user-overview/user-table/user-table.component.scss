@@ -1,0 +1,30 @@
+:host {
+  display: block;
+}
+
+.ui-user-table {
+  width: 100%;
+  table-layout: auto;
+}
+
+tr.ui-user-table-row {
+  cursor: pointer;
+
+  &:hover {
+    border-top: 1px solid;
+    background-color: grey;
+    border-color: currentColor;
+  }
+}
+
+// Make the padding of form-fields smaller in the table-header
+::ng-deep .ui-user-table-form-field .mat-mdc-form-field-wrapper {
+  padding: 0;
+}
+
+/**
+ TODO: Store the color-value as a custom css property and load it here.
+*/
+.ui-user-table-row-selected {
+  background-color: #616161;
+}

@@ -1,0 +1,95 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Benutzer</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <table
+      mat-table
+      class="ui-user-table"
+      [dataSource]="_dataSource"
+      (matSortChange)="handleTableSortChange()"
+      aria-label="Benutzer"
+      matSort
+    >
+      <ng-container matColumnDef="email">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef>E-Mail</th>
+        <td mat-cell *matCellDef="let row">{{row.email}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="username">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef>Benutzername</th>
+        <td mat-cell *matCellDef="let row">{{row.username}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="title">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef>Titel</th>
+        <td mat-cell *matCellDef="let row">{{row.Title.id}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="salutation">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef>Anrede</th>
+        <td mat-cell *matCellDef="let row">{{row.Salutation.id}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="firstName">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef>Vorname</th>
+        <td mat-cell *matCellDef="let row">{{row.firstName}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="secondName">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef>Nachname</th>
+        <td mat-cell *matCellDef="let row">{{row.secondName}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="gender">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef>Geschlecht</th>
+        <td mat-cell *matCellDef="let row">{{row.gender}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="context-menu">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let row">
+          <ui-delete-dialog
+            [disabled]="_selectedRow.selected[0] === row.id"
+            uiDeleteDialogIcon="delete"
+            uiDeleteDialogButtonColor="warn"
+            [uiDeleteDialogConfig]="_deleteDialogConfig"
+            uiDeleteDialogButtonText="Löschen"
+            (uiDeleteDialogApplyClicked)="handleDeleteUserClick(row)"
+          >
+          </ui-delete-dialog>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <ng-container *ngIf="displaySearchColumns">
+        <tr
+          mat-header-row
+          *matHeaderRowDef="displayedSearchColumns">
+        </tr>
+      </ng-container>
+      <tr
+        mat-row
+        (mouseover)="prefetchFormData()"
+        (click)="handleTableRowClick(row, $event)"
+        *matRowDef="let row; columns: displayedColumns"
+        [class.ui-user-table-row-selected]="_selectedRow.selected[0] === row.id"
+        class="ui-user-table-row"
+      >
+      </tr>
+
+      <tr *matNoDataRow class="mat-row">
+        <td colspan="7">Keine Daten gefunden</td>
+      </tr>
+
+    </table>
+    <mat-paginator
+      (page)="loadUsers($event)"
+      showFirstLastButtons
+      [pageSizeOptions]="_pageSizeOptions"
+      [pageSize]="_pageSize"
+    >
+    </mat-paginator>
+  </mat-card-content>
+</mat-card>

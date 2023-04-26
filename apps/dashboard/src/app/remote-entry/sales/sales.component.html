@@ -1,0 +1,80 @@
+<mat-card class="ui-dashboard-sales-widget-card">
+  <mat-card-header>
+    <mat-card-title>
+      Willkommen {{(user$ | async)?.username}}
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="ui-dashboard-sales-widget-spacer"></div>
+    <div uiGridRow>
+      <div uiGridCol uiGridColSpan="12">
+        <div uiGridRow>
+          <div uiGridCol uiGridColSpan="7">
+            <h3>Verfügbare Einheiten:</h3>
+            <mat-list class="ui-dashboard-sales-widget-mat-list">
+              <mat-list-item
+                class="ui-dashboard-sales-widget-mat-list-item"
+                *ngFor="let articleUnit of articleUnits$ | async; let last = last"
+              >
+                {{articleUnit.nameLong}} ({{articleUnit.nameShort}})
+                <mat-divider *ngIf="!last"></mat-divider>
+              </mat-list-item>
+            </mat-list>
+          </div>
+          <div uiGridCol uiGridColOffset="1" uiGridColSpan="7">
+            <h3>Verfügbare Währungen:</h3>
+            <mat-list class="ui-dashboard-sales-widget-mat-list">
+              <mat-list-item
+                class="ui-dashboard-sales-widget-mat-list-item"
+                *ngFor="let currency of currencies$ | async; let last = last"
+              >
+                {{currency.longName}} ({{currency.shortName}})
+                <mat-divider *ngIf="!last"></mat-divider>
+              </mat-list-item>
+            </mat-list>
+          </div>
+          <div uiGridCol uiGridColOffset="1" uiGridColSpan="7">
+            <h3>Rechnungstypen:</h3>
+            <mat-list class="ui-dashboard-sales-widget-mat-list">
+              <mat-list-item
+                class="ui-dashboard-sales-widget-mat-list-item"
+                *ngFor="let invoiceType of invoiceTypes$ | async; let last = last"
+              >
+                {{invoiceType.id}}
+                <mat-divider *ngIf="!last"></mat-divider>
+              </mat-list-item>
+            </mat-list>
+          </div>
+        </div>
+      </div>
+      <div uiGridCol uiGridColSpan="12">
+        <div uiGridRow>
+          <div uiGridCol uiGridColOffset="1" uiGridColSpan="10">
+            <h3>Verfügbare Rechnungsländer:</h3>
+            <mat-list class="ui-dashboard-sales-widget-mat-list">
+              <mat-list-item
+                class="ui-dashboard-sales-widget-mat-list-item"
+                *ngFor="let country of countries$ | async; let last = last"
+              >
+                {{country.shortName}} ({{country.shortName}})
+                <mat-divider *ngIf="!last"></mat-divider>
+              </mat-list-item>
+            </mat-list>
+          </div>
+          <div uiGridCol uiGridColOffset="1" uiGridColSpan="11">
+            <h3>Mehrwertsteuersätze:</h3>
+            <mat-list class="ui-dashboard-sales-widget-mat-list">
+              <mat-list-item
+                class="ui-dashboard-sales-widget-mat-list-item"
+                *ngFor="let vat of vats$ | async; let last = last"
+              >
+                {{vat.vatRemark}} ({{vat.vat}}%)
+                <mat-divider *ngIf="!last"></mat-divider>
+              </mat-list-item>
+            </mat-list>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

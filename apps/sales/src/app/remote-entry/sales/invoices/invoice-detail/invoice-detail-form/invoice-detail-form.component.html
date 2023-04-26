@@ -1,0 +1,32 @@
+<form name="invoiceDetailForm" [formGroup]="_invoiceForm" (ngSubmit)="_handleFormSubmission()">
+  <mat-card>
+    <mat-card-content>
+      <ui-sales-invoice-common
+        [uiForm]="_invoiceCommonForm"
+        [uiInvoiceTypes]="invoiceTypes"
+      ></ui-sales-invoice-common>
+      <ui-sales-invoice-position
+        *ngFor="let form of _invoicePositionForms.controls; let index = index"
+        [uiForm]="form"
+        [uiIndex]="index + 1"
+        [uiVats]="vats"
+        [uiCountries]="invoicePositionCountries"
+        [uiArticleUnits]="articleUnits"
+      ></ui-sales-invoice-position>
+      <ui-sales-invoice-notes
+        *ngIf="_noteForms.controls.length > 0"
+        [uiNoteForms]="_noteForms"
+      ></ui-sales-invoice-notes>
+      <ui-customer
+        [uiForm]="_customerForm"
+        [uiCountries]="customerCountries"
+      ></ui-customer>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <ui-form-submit>
+        <button uiFormAbortButton mat-raised-button>Abbrechen</button>
+        <button uiFormSubmitButton mat-raised-button [disabled]="_invoiceForm.invalid">Speichern</button>
+      </ui-form-submit>
+    </mat-card-actions>
+  </mat-card>
+</form>

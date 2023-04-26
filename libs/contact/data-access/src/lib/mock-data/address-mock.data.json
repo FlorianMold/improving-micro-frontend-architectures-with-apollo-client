@@ -1,0 +1,102 @@
+[
+  {
+    "id": "ad86572f-dfd9-4b42-9162-67f1f201e1c5",
+    "country_id": "Bosnien und Herzegowina",
+    "location": "Marikascheid",
+    "postalCode": "30757",
+    "streetName": "Hannah-Höch-Str.",
+    "createdAt": 1666761496481,
+    "changedAt": 1667919400520,
+    "deletedAt": null
+  },
+  {
+    "id": "de046030-b184-4dbf-97dd-586686580d5e",
+    "country_id": "Griechenland",
+    "location": "Stellaland",
+    "postalCode": "11880",
+    "streetName": "Werner-Heisenberg-Str.",
+    "createdAt": 1656485022579,
+    "changedAt": 1667855421444,
+    "deletedAt": null
+  },
+  {
+    "id": "b433bc0b-5b55-425f-9553-4cfbd7066ea4",
+    "country_id": "Ukraine",
+    "location": "Ost Robertstadt",
+    "postalCode": "00499",
+    "streetName": "Metzer Str.",
+    "createdAt": 1665860043718,
+    "changedAt": 1667859843663,
+    "deletedAt": null
+  },
+  {
+    "id": "7b6a068d-ad66-4759-a4b0-f19b01815b24",
+    "country_id": "Anguilla",
+    "location": "Bad Thorben",
+    "postalCode": "95285",
+    "streetName": "Allensteiner Str.",
+    "createdAt": 1641730465067,
+    "changedAt": 1667907566701,
+    "deletedAt": null
+  },
+  {
+    "id": "4c980f2e-c7f6-473c-8f32-7afa7b46a0f0",
+    "country_id": "Bosnien und Herzegowina",
+    "location": "Adelinadorf",
+    "postalCode": "78182",
+    "streetName": "Alte Landstr.",
+    "createdAt": 1648627678639,
+    "changedAt": 1667875288294,
+    "deletedAt": null
+  },
+  {
+    "id": "7df49b47-5dfa-42e9-a70e-dd731f81fc5b",
+    "country_id": "Anguilla",
+    "location": "Ost Matthis",
+    "postalCode": "95711",
+    "streetName": "Rückertstr.",
+    "createdAt": 1640161256677,
+    "changedAt": 1667872490407,
+    "deletedAt": null
+  },
+  {
+    "id": "64dc7453-f8f8-4c04-86f2-7310b0c6a4dd",
+    "country_id": "Kiribati",
+    "location": "Marlburg",
+    "postalCode": "36783",
+    "streetName": "Mathildenweg",
+    "createdAt": 1638307001525,
+    "changedAt": 1667911884562,
+    "deletedAt": null
+  },
+  {
+    "id": "d5b47f9e-72ea-458f-ad1c-3c843ff89eb6",
+    "country_id": "Bosnien und Herzegowina",
+    "location": "Tomkescheid",
+    "postalCode": "21998",
+    "streetName": "Bamberger Str.",
+    "createdAt": 1659169443734,
+    "changedAt": 1667895084285,
+    "deletedAt": null
+  },
+  {
+    "id": "a30c0a92-b3c2-40c1-9c6f-9d2419c0b11c",
+    "country_id": "Bosnien und Herzegowina",
+    "location": "Ost Beratstadt",
+    "postalCode": "75949",
+    "streetName": "Kurtekottenweg",
+    "createdAt": 1659087069469,
+    "changedAt": 1667917348177,
+    "deletedAt": null
+  },
+  {
+    "id": "232fba0f-b649-47e3-a947-bd0a5aacbab5",
+    "country_id": "Griechenland",
+    "location": "Anthonyscheid",
+    "postalCode": "55098",
+    "streetName": "Menchendahler Str.",
+    "createdAt": 1640658351570,
+    "changedAt": 1667895381286,
+    "deletedAt": null
+  }
+]

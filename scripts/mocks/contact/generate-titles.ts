@@ -1,0 +1,110 @@
+import { UiTitleModel } from '@ui-frontend-service/contact/api-types';
+import { writeFileSync } from 'fs';
+import { faker } from '@faker-js/faker/locale/de';
+
+const POSSIBLE_TITLES = [
+  'B. phil.',
+  'B. rer. nat.',
+  'B.Ac.',
+  'B.B.A.',
+  'B.chin.Pharm.',
+  'B.Eng.',
+  'B.Tui.',
+  'BA',
+  'Bakk.',
+  'Bakk. (FH)',
+  'BEd',
+  'BSc',
+  'Dipl.-Bw. (FH)',
+  'Dipl.-Dolm.',
+  'Dipl.-HLFL-Ing.',
+  'Dipl.-HTL-Ing.',
+  'Dipl.-Ing.',
+  'Dipl.-Ing. (FH)',
+  'Dipl.-Kffr.',
+  'Dipl.-Kfm.',
+  'Dipl.-Päd.',
+  'Dipl.-Vw.',
+  'Dr.',
+  'EMHRD',
+  'EMLE',
+  'Exec. MBA',
+  'Ing.',
+  'Int. MLE',
+  'jun',
+  'Lic. theol.',
+  'LL.M.',
+  'LLB',
+  'M.A.I.S.',
+  'M.Ac.',
+  'M.B.A.',
+  'M.B.L.',
+  'M.chin.Pharm.',
+  'M.E.S.',
+  'M.Ed.',
+  'M.TCM.',
+  'M.Theol.',
+  'M.Tui.',
+  'MA',
+  'MA. rer. nat.',
+  'Mag.',
+  'Mag. (FH)',
+  'Mag. med. vet.',
+  'MArch',
+  'MAS',
+  'Mastère',
+  'MBA',
+  'MCoach',
+  'MDes',
+  'MDSc',
+  'MEM',
+  'MEng',
+  'MFA',
+  'MFP',
+  'MIB',
+  'MIBI',
+  'MIM',
+  'mj',
+  'MLE',
+  'MLL',
+  'MLS',
+  'MMedScAA',
+  'MPA',
+  'MPC',
+  'MPH',
+  'MPM',
+  'MPOS',
+  'MSc',
+  'MScMF',
+  'MSD',
+  'MSPT',
+  'Mst.',
+  'MTox',
+  'P LL.M',
+  'PhD',
+  'PMM',
+  'PMPB',
+  'PMPH',
+  'sen',
+  'Tzt.',
+];
+
+function generateTitles(): UiTitleModel[] {
+  return [
+    ...POSSIBLE_TITLES.map((title) => ({
+      id: title,
+      changedAt: faker.date.recent().valueOf(),
+      createdAt: faker.date.past().valueOf(),
+      deletedAt: null,
+    })),
+  ];
+}
+
+function storeTitles(titles: UiTitleModel[], path: string): UiTitleModel[] {
+  writeFileSync(path, JSON.stringify(titles, null, 2));
+  return titles;
+}
+
+export function generateAndStoreTitles(folder: string, filename: string): UiTitleModel[] {
+  return storeTitles(generateTitles(), `${folder}/${filename}`);
+}

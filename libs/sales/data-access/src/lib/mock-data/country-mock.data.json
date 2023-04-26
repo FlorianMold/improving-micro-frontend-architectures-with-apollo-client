@@ -1,0 +1,65 @@
+[
+  {
+    "id": "AT",
+    "shortName": "AT",
+    "longName": "Österreich",
+    "euMember": true,
+    "changedAt": 1670518953603,
+    "createdAt": 1666921626828,
+    "deletedAt": null
+  },
+  {
+    "id": "DE",
+    "shortName": "DE",
+    "longName": "Deutschland",
+    "euMember": true,
+    "changedAt": 1670576939161,
+    "createdAt": 1655041844221,
+    "deletedAt": null
+  },
+  {
+    "id": "IT",
+    "shortName": "IT",
+    "longName": "Italien",
+    "euMember": true,
+    "changedAt": 1670539177753,
+    "createdAt": 1648332245903,
+    "deletedAt": null
+  },
+  {
+    "id": "SK",
+    "shortName": "SK",
+    "longName": "Slowakei",
+    "euMember": true,
+    "changedAt": 1670560524348,
+    "createdAt": 1663774049186,
+    "deletedAt": null
+  },
+  {
+    "id": "US",
+    "shortName": "USA",
+    "longName": "Vereinigte Staaten von Amerika",
+    "euMember": false,
+    "changedAt": 1670591026791,
+    "createdAt": 1661676651099,
+    "deletedAt": null
+  },
+  {
+    "id": "FR",
+    "shortName": "FR",
+    "longName": "Frankreich",
+    "euMember": true,
+    "changedAt": 1670578510636,
+    "createdAt": 1649679290680,
+    "deletedAt": null
+  },
+  {
+    "id": "UK",
+    "shortName": "UK",
+    "longName": "Großbritannien",
+    "euMember": false,
+    "changedAt": 1670570102681,
+    "createdAt": 1649755376978,
+    "deletedAt": null
+  }
+]

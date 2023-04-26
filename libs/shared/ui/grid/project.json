@@ -1,0 +1,40 @@
+{
+  "name": "shared-ui-grid",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/shared/ui/grid/src",
+  "prefix": "ui-grid",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/libs/shared/ui/grid"],
+      "options": {
+        "project": "libs/shared/ui/grid/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/shared/ui/grid/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/shared/ui/grid/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/shared/ui/grid"],
+      "options": {
+        "jestConfig": "libs/shared/ui/grid/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/shared/ui/grid/**/*.ts", "libs/shared/ui/grid/**/*.html"]
+      }
+    }
+  },
+  "tags": ["scope:lib-shared", "scope:lib-shared-ui"]
+}

@@ -1,0 +1,7 @@
+{
+  "sales": "http://localhost:4201",
+  "contact": "http://localhost:4202",
+  "dashboard": "http://localhost:4203",
+  "user": "http://localhost:4204",
+  "dashboard-react": "http://localhost:4299"
+}

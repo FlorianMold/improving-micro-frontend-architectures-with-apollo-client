@@ -1,0 +1,112 @@
+[
+  {
+    "id": "3617d48e-ee54-434c-ba54-d2cb6c1f4e4a",
+    "accountHolder": "Lavinia",
+    "iban": "AD215506641358T381B001C5",
+    "bic": "NTTBCGR0",
+    "bankName": "Emert GmbH",
+    "bankCode": "659947598",
+    "changedAt": 1667873809595,
+    "createdAt": 1665540612503,
+    "deletedAt": null
+  },
+  {
+    "id": "8c7cdde2-e4d8-427a-9f4c-e9ce5880b15a",
+    "accountHolder": "Patrizia",
+    "iban": "PS821205000900744003785050002",
+    "bic": "PPGHMKLN",
+    "bankName": "Kleinmann GmbH",
+    "bankCode": "048189255",
+    "changedAt": 1667869652770,
+    "createdAt": 1665699507635,
+    "deletedAt": null
+  },
+  {
+    "id": "e9a525a0-5ee0-45e3-bd49-3a3ab8ee40b7",
+    "accountHolder": "Silja",
+    "iban": "JO44DAIF2432180053669390060352",
+    "bic": "ACCFBB8T",
+    "bankName": "Alizadeh, Allgeyer und Grube",
+    "bankCode": "932693378",
+    "changedAt": 1667902622838,
+    "createdAt": 1640620042672,
+    "deletedAt": null
+  },
+  {
+    "id": "5224af70-f5df-4e67-b301-a57104826874",
+    "accountHolder": "Valeria",
+    "iban": "KW96OQUPZ30U041Y552860449395BM",
+    "bic": "YPSWSMCDXXX",
+    "bankName": "Seitz AG",
+    "bankCode": "489721337",
+    "changedAt": 1667868600074,
+    "createdAt": 1649859508029,
+    "deletedAt": null
+  },
+  {
+    "id": "ed172b07-ec98-42ed-9678-ef65061a8808",
+    "accountHolder": "Pierre",
+    "iban": "QA21WPIZJ013W945D2458EU572MN7",
+    "bic": "QCMTKP8CD6M",
+    "bankName": "Von, Tietze und Büngener",
+    "bankCode": "673958932",
+    "changedAt": 1667915973676,
+    "createdAt": 1665005179787,
+    "deletedAt": null
+  },
+  {
+    "id": "6334b4ff-f328-4148-9fd6-e8e9f750970a",
+    "accountHolder": "Viktor",
+    "iban": "CY9080012182435N271IH5062407",
+    "bic": "ECJWLSQN",
+    "bankName": "Madubuko-Frey",
+    "bankCode": "045724079",
+    "changedAt": 1667937539141,
+    "createdAt": 1651680410271,
+    "deletedAt": null
+  },
+  {
+    "id": "65f6150d-443a-45a8-b9e5-1212d7e274d9",
+    "accountHolder": "Marika",
+    "iban": "PT66560899439100600900530",
+    "bic": "MLUVHKM2",
+    "bankName": "Günther, Pohland und Pohle",
+    "bankCode": "188079937",
+    "changedAt": 1667926767763,
+    "createdAt": 1649358072862,
+    "deletedAt": null
+  },
+  {
+    "id": "740e047f-0461-40c7-b487-d32f1e09ad6f",
+    "accountHolder": "Zoey",
+    "iban": "IE44402417500261710022",
+    "bic": "SHOLNENKG18",
+    "bankName": "Simon, Bornscheuer und Taufratshofer",
+    "bankCode": "180308062",
+    "changedAt": 1667857490826,
+    "createdAt": 1660230278458,
+    "deletedAt": null
+  },
+  {
+    "id": "c175a62a-dcaa-4933-a8f5-771250e3cd81",
+    "accountHolder": "Vera",
+    "iban": "IL129400292008020210344",
+    "bic": "URHLAMDWAEQ",
+    "bankName": "Schlicht-Zümsande",
+    "bankCode": "855201737",
+    "changedAt": 1667883481740,
+    "createdAt": 1659003549596,
+    "deletedAt": null
+  },
+  {
+    "id": "741cbaf2-83d9-4e83-b431-ce599ccdc43a",
+    "accountHolder": "Bent",
+    "iban": "IT34Z02860070086LIK416H21N3",
+    "bic": "MPXWFJ9D",
+    "bankName": "Matthes GmbH & Co. KG",
+    "bankCode": "911226038",
+    "changedAt": 1667894605013,
+    "createdAt": 1661349766297,
+    "deletedAt": null
+  }
+]

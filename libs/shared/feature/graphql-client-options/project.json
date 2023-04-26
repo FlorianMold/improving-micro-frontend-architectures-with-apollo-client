@@ -1,0 +1,43 @@
+{
+  "name": "shared-feature-graphql-client-options",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/shared/feature/graphql-client-options/src",
+  "prefix": "ui-graphql-client",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/libs/shared/feature/graphql-client-options"],
+      "options": {
+        "project": "libs/shared/feature/graphql-client-options/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/shared/feature/graphql-client-options/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/shared/feature/graphql-client-options/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/shared/feature/graphql-client-options"],
+      "options": {
+        "jestConfig": "libs/shared/feature/graphql-client-options/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/feature/graphql-client-options/**/*.ts",
+          "libs/shared/feature/graphql-client-options/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:lib-shared", "scope:lib-shared-feature"]
+}

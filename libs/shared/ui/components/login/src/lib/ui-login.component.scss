@@ -1,0 +1,15 @@
+:host {
+  display: block;
+}
+
+.ui-login-controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+
+  & > * {
+    margin-bottom: 1rem;
+  }
+}
+

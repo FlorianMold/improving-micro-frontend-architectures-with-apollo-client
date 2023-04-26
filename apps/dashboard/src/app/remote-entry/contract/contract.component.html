@@ -1,0 +1,21 @@
+<mat-card class="ui-dashboard-contract-widget-card">
+  <mat-card-header>
+    <mat-card-title>
+      Willkommen {{(user$ | async)?.username}}
+    </mat-card-title>
+    <mat-card-subtitle>Top Verträge:</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-list class="ui-dashboard-contract-widget-mat-list">
+      <mat-list-item
+        class="ui-dashboard-contract-widget-mat-list-item"
+        *ngFor="let contract of contracts$ | async; let last = last"
+        [routerLink]="['./sales/contracts', { outlets: { 'detail-outlet': ['detail', contract.id] } }]"
+
+      >
+        {{contract.name}} ({{contract?.Customer?.SalesCountry?.shortName}})
+        <mat-divider *ngIf="!last"></mat-divider>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "STANDARD",
+    "changedAt": 1670591835877,
+    "createdAt": 1658488409682,
+    "deletedAt": null
+  },
+  {
+    "id": "RECURRING",
+    "changedAt": 1670512497283,
+    "createdAt": 1657739252179,
+    "deletedAt": null
+  },
+  {
+    "id": "CREDIT",
+    "changedAt": 1670560122489,
+    "createdAt": 1659331751708,
+    "deletedAt": null
+  },
+  {
+    "id": "DEBIT",
+    "changedAt": 1670567583098,
+    "createdAt": 1669181608529,
+    "deletedAt": null
+  }
+]

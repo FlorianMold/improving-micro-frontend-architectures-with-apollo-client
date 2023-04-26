@@ -1,0 +1,52 @@
+<ui-layout-dom>
+  <ui-layout-main-content>
+    <router-outlet></router-outlet>
+  </ui-layout-main-content>
+</ui-layout-dom>
+
+<ng-template #topRightMenu>
+  <div class="ui-user-top-right-menu">
+    <ng-container>
+      <button
+        *ngIf="(user$ | async) === null"
+        class="ui-user-top-right-menu-login-button"
+        mat-raised-button
+        color="primary"
+        routerLink="./login"
+      >
+        Login
+      </button>
+      <ng-container *ngIf="user$ | async as user">
+        <button
+          class="ui-user-top-right-menu-login-button"
+          mat-button
+          [matMenuTriggerFor]="userMenu"
+        >
+          {{ user.username }}
+          <mat-icon>arrow_drop_down</mat-icon>
+        </button>
+        <mat-menu #userMenu="matMenu">
+          <button
+            disabled
+            mat-menu-item
+          >
+            {{ user.email }}
+          </button>
+          <button
+            mat-menu-item
+            [routerLink]="['./profile', user.id]"
+          >
+            Mein Profil
+          </button>
+          <button
+            mat-menu-item
+            (click)="handleLogoutClick()"
+          >
+            Abmelden
+          </button>
+        </mat-menu>
+      </ng-container>
+
+    </ng-container>
+  </div>
+</ng-template>

@@ -1,0 +1,40 @@
+{
+  "name": "contact-api-types",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/contact/api-types/src",
+  "prefix": "ui-frontend-service",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/libs/contact/api-types"],
+      "options": {
+        "project": "libs/contact/api-types/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/contact/api-types/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/contact/api-types/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/contact/api-types"],
+      "options": {
+        "jestConfig": "libs/contact/api-types/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/contact/api-types/**/*.ts", "libs/contact/api-types/**/*.html"]
+      }
+    }
+  },
+  "tags": ["scope:lib-contact"]
+}

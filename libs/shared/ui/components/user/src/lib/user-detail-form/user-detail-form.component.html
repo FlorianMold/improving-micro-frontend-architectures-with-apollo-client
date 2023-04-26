@@ -1,0 +1,18 @@
+<form name="userForm" (ngSubmit)="_handleFormSubmission()">
+  <mat-card>
+    <mat-card-content>
+      <ui-profile
+        [uiProfileSalutations]="salutations"
+        [uiProfileTitles]="titles"
+        [uiProfileForm]="_profileForm"
+      ></ui-profile>
+      <ui-address [uiAddressForm]="_addressForm" [uiAddressCountries]="countries"></ui-address>
+    </mat-card-content>
+    <mat-card-actions align="end">
+      <ui-form-submit class="ui-address-form-submit">
+        <button uiFormAbortButton mat-raised-button>Abbrechen</button>
+        <button uiFormSubmitButton mat-raised-button [disabled]="_userDetailForm.invalid">Speichern</button>
+      </ui-form-submit>
+    </mat-card-actions>
+  </mat-card>
+</form>

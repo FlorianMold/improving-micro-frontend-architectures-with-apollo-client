@@ -1,0 +1,21 @@
+<mat-card class="ui-dashboard-contact-list-widget-card">
+  <mat-card-header>
+    <mat-card-title>
+      Willkommen {{(user$ | async)?.username}}
+    </mat-card-title>
+    <mat-card-subtitle>Top Kontakte:</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-list class="ui-dashboard-contact-list-widget-mat-list">
+      <mat-list-item
+        class="ui-dashboard-contact-list-widget-mat-list-item"
+        *ngFor="let contact of contactList$ | async; let last = last"
+        [routerLink]="['./contact', { outlets: { 'detail-outlet': ['detail', contact.id] } }]"
+
+      >
+        {{contact.firstName}} {{contact.secondName}} ({{contact.uidNumber}})
+        <mat-divider *ngIf="!last"></mat-divider>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

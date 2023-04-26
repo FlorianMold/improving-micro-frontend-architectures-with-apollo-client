@@ -1,0 +1,20 @@
+<mat-card class="ui-dashboard-user-widget-card">
+  <mat-card-header>
+    <mat-card-title>
+      Willkommen {{(user$ | async)?.username}}
+    </mat-card-title>
+    <mat-card-subtitle>Benutzer nach Aktivität:</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-list class="ui-dashboard-user-widget-mat-list">
+      <mat-list-item
+        class="ui-dashboard-user-widget-mat-list-item"
+        *ngFor="let user of users$ | async; let last = last"
+        [routerLink]="['./users', { outlets: { 'detail-outlet': ['detail', user.id] } }]"
+      >
+        {{user.firstName}} {{user.secondName}} ({{user.username}})
+        <mat-divider *ngIf="!last"></mat-divider>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

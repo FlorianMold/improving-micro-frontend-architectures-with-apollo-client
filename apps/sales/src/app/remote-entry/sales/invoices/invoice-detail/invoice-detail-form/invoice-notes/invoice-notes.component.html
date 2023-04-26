@@ -1,0 +1,14 @@
+<div uiGridRow>
+  <div uiGridCol uiGridColSpan="24">
+    <div class="ui-sub-form-header">
+      <h2>Notizen</h2>
+    </div>
+    <div class="ui-sub-form-main">
+      <ng-container *ngFor="let form of noteForms.controls; let last = last">
+        <ui-sales-invoice-note [uiNoteForm]="form"></ui-sales-invoice-note>
+        <mat-divider *ngIf="!last"></mat-divider>
+        <div class="ui-sales-invoice-detail-notes-spacer"></div>
+      </ng-container>
+    </div>
+  </div>
+</div>

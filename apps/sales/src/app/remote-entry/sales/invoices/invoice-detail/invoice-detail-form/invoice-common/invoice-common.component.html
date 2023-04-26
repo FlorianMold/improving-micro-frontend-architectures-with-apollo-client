@@ -1,0 +1,40 @@
+<div [formGroup]="invoiceCommonForm" uiGridRow>
+  <div uiGridCol uiGridColSpan="24">
+    <div class="ui-sub-form-header">
+      <h2>Rechnung</h2>
+    </div>
+    <div class="ui-sub-form-main">
+      <div uiGridRow>
+        <div uiGridCol [uiGridColSpan]="11">
+          <mat-form-field>
+            <mat-label>ID</mat-label>
+            <input matInput placeholder="ID" formControlName="id">
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Bearbeiter</mat-label>
+            <input matInput placeholder="Bearbeiter" formControlName="modifyClient">
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Rechnungstyp</mat-label>
+            <mat-select formControlName="invoiceType">
+              <mat-option>--</mat-option>
+              <mat-option *ngFor="let type of invoiceTypes" [value]="type.id">
+                {{type.id}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div uiGridCol [uiGridColSpan]="11" [uiGridColOffset]="2">
+          <mat-form-field>
+            <mat-label>Ersteller</mat-label>
+            <input matInput placeholder="Ersteller" formControlName="creatorClient">
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Kunde</mat-label>
+            <input matInput placeholder="Kunde" formControlName="customerName">
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

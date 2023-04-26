@@ -1,0 +1,54 @@
+<div [formGroup]="contractForm" uiGridRow>
+  <div uiGridCol uiGridColSpan="24">
+    <div class="ui-sub-form-header">
+      <h2>Vertrag</h2>
+    </div>
+    <div class="ui-sub-form-main">
+      <div uiGridRow>
+        <div uiGridCol uiGridColSpan="11">
+          <mat-form-field>
+            <mat-label>ID</mat-label>
+            <input matInput formControlName="id">
+          </mat-form-field>
+        </div>
+
+        <div uiGridCol uiGridColOffset="2" uiGridColSpan="11">
+          <mat-form-field>
+            <mat-label>Auftragnehmer</mat-label>
+            <input matInput formControlName="contractor">
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div uiGridRow>
+        <div uiGridCol uiGridColSpan="11">
+          <mat-form-field>
+            <mat-label>Beschreibung</mat-label>
+            <input matInput formControlName="description">
+          </mat-form-field>
+        </div>
+        <div uiGridCol uiGridColOffset="2" uiGridColSpan="11">
+          <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name">
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div uiGridRow>
+        <div uiGridCol uiGridColSpan="11">
+          <mat-form-field>
+            <mat-label>Zahlungszeitraum</mat-label>
+            <input matInput formControlName="payPeriod">
+          </mat-form-field>
+        </div>
+        <div uiGridCol uiGridColOffset="2" uiGridColSpan="11">
+          <mat-form-field>
+            <mat-label>Zahlungszielvorschuss</mat-label>
+            <input matInput formControlName="payPeriodAdvance">
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

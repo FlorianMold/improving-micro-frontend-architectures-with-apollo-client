@@ -1,0 +1,40 @@
+{
+  "name": "shared-util-types",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/shared/util/types/src",
+  "prefix": "ui",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/libs/shared/util/types"],
+      "options": {
+        "project": "libs/shared/util/types/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/shared/util/types/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/shared/util/types/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/shared/util/types"],
+      "options": {
+        "jestConfig": "libs/shared/util/types/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/shared/util/types/**/*.ts", "libs/shared/util/types/**/*.html"]
+      }
+    }
+  },
+  "tags": ["scope:lib-shared", "scope:lib-shared-util"]
+}

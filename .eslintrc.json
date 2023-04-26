@@ -1,0 +1,136 @@
+{
+  "root": true,
+  "ignorePatterns": ["**/*"],
+  "plugins": ["@nrwl/nx"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "rules": {
+        "@nrwl/nx/enforce-module-boundaries": [
+          "error",
+          {
+            "enforceBuildableLibDependency": true,
+            "allow": [],
+            "depConstraints": [
+              {
+                "sourceTag": "scope:app-contact",
+                "onlyDependOnLibsWithTags": [
+                  "scope:app-contact",
+                  "scope:lib-contact",
+                  "scope:lib-shared"
+                ]
+              },
+              {
+                "sourceTag": "scope:app-dashboard",
+                "onlyDependOnLibsWithTags": [
+                  "scope:app-dashboard",
+                  "scope:lib-contact",
+                  "scope:lib-sales",
+                  "scope:lib-shared"
+                ]
+              },
+              {
+                "sourceTag": "scope:app-user",
+                "onlyDependOnLibsWithTags": [
+                  "scope:app-user",
+                  "scope:lib-shared"
+                ]
+              },
+              {
+                "sourceTag": "scope:app-host",
+                "onlyDependOnLibsWithTags": [
+                  "scope:app-host",
+                  "scope:lib-host",
+                  "scope:lib-shared"
+                ]
+              },
+              {
+                "sourceTag": "scope:app-sales",
+                "onlyDependOnLibsWithTags": [
+                  "scope:app-sales",
+                  "scope:lib-sales",
+                  "scope:lib-shared"
+                ]
+              },
+              {
+                "sourceTag": "scope:lib-contact",
+                "onlyDependOnLibsWithTags": [
+                  "scope:lib-contact",
+                  "scope:lib-shared-api-types",
+                  "scope:lib-shared-ui",
+                  "scope:lib-shared-data-access",
+                  "scope:lib-shared-feature"
+                ]
+              },
+              {
+                "sourceTag": "scope:lib-host",
+                "onlyDependOnLibsWithTags": [
+                  "scope:lib-host",
+                  "scope:lib-shared-api-types",
+                  "scope:lib-shared-ui",
+                  "scope:lib-shared-data-access",
+                  "scope:lib-shared-feature"
+                ]
+              },
+              {
+                "sourceTag": "scope:lib-sales",
+                "onlyDependOnLibsWithTags": [
+                  "scope:lib-sales",
+                  "scope:lib-shared-api-types",
+                  "scope:lib-shared-ui",
+                  "scope:lib-shared-data-access",
+                  "scope:lib-shared-feature"
+                ]
+              },
+              {
+                "sourceTag": "scope:lib-shared-api-types",
+                "onlyDependOnLibsWithTags": [
+                  "scope:lib-shared-api-types",
+                  "scope:lib-shared-feature"
+                ]
+              },
+              {
+                "sourceTag": "scope:lib-shared-data-access",
+                "onlyDependOnLibsWithTags": [
+                  "scope:lib-shared-api-types",
+                  "scope:lib-shared-feature"
+                ]
+              },
+              {
+                "sourceTag": "scope:lib-shared-feature",
+                "onlyDependOnLibsWithTags": [
+                  "scope:lib-shared-feature",
+                  "scope:lib-shared-ui",
+                  "scope:lib-shared-data-access",
+                  "scope:lib-shared-api-types"
+                ]
+              },
+              {
+                "sourceTag": "scope:lib-shared-ui",
+                "onlyDependOnLibsWithTags": [
+                  "scope:lib-shared-ui"
+                ]
+              },
+              {
+                "sourceTag": "scope:lib-shared-util",
+                "onlyDependOnLibsWithTags": [
+                  "scope:lib-shared-util"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "extends": ["plugin:@nrwl/nx/typescript"],
+      "rules": {}
+    },
+    {
+      "files": ["*.js", "*.jsx"],
+      "extends": ["plugin:@nrwl/nx/javascript"],
+      "rules": {}
+    }
+  ]
+}

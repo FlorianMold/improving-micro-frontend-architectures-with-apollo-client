@@ -1,0 +1,18 @@
+import { UI_USER_DATA_ACCESS_PROVIDER } from './user';
+import { UI_GLOBAL_STATE_DATA_ACCESS_PROVIDER } from './global-state';
+import { UI_AUTHENTICATION_DATA_ACCESS_PROVIDER } from './authentication';
+import { UI_COUNTRY_DATA_ACCESS_PROVIDER } from './country';
+import { UI_SALUTATION_DATA_ACCESS_PROVIDER } from './salutation';
+import { UI_TITLE_DATA_ACCESS_PROVIDER } from './title';
+import { UI_ADDRESS_DATA_ACCESS_PROVIDER } from './address';
+
+/** Provides all services for accessing common data. */
+export const UI_DATA_ACCESS_SERVICE_PROVIDERS = [
+  ...UI_AUTHENTICATION_DATA_ACCESS_PROVIDER,
+  ...UI_GLOBAL_STATE_DATA_ACCESS_PROVIDER,
+  ...UI_USER_DATA_ACCESS_PROVIDER,
+  ...UI_COUNTRY_DATA_ACCESS_PROVIDER,
+  ...UI_SALUTATION_DATA_ACCESS_PROVIDER,
+  ...UI_TITLE_DATA_ACCESS_PROVIDER,
+  ...UI_ADDRESS_DATA_ACCESS_PROVIDER,
+];

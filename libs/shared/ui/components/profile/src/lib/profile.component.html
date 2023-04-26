@@ -1,0 +1,98 @@
+<div [formGroup]="profileForm" uiGridRow>
+  <div uiGridCol uiGridColSpan="24">
+    <div class="ui-sub-form-header">
+      <h2>Profil</h2>
+    </div>
+    <div class="ui-sub-form-main">
+      <div uiGridRow>
+        <div uiGridCol [uiGridColSpan]="11">
+          <mat-form-field>
+            <mat-label>E-Mail</mat-label>
+            <input matInput placeholder="E-Mail" formControlName="email">
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Passwort</mat-label>
+            <input
+              matInput
+              placeholder="Passwort"
+              [type]="_hidePassword ? 'password' : 'text'"
+              formControlName="password"
+            >
+            <mat-icon
+              matSuffix
+              (click)="_hidePassword = !_hidePassword"
+            >
+              {{_hidePassword ? 'visibility_off' : 'visibility'}}
+            </mat-icon>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Benutzername</mat-label>
+            <input matInput placeholder="Benutzername" formControlName="username">
+          </mat-form-field>
+        </div>
+
+
+        <div uiGridCol [uiGridColOffset]="2" [uiGridColSpan]="11">
+
+          <mat-form-field>
+            <mat-label>Anrede</mat-label>
+            <mat-select formControlName="salutation_id">
+              <mat-option *ngFor="let salutation of salutations" [value]="salutation.id">
+                {{salutation.id}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Titel</mat-label>
+            <mat-select formControlName="title_id">
+              <mat-option>--</mat-option>
+              <mat-option *ngFor="let title of titles" [value]="title.id">
+                {{title.id}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Vorname</mat-label>
+            <input matInput placeholder="Vorname" formControlName="firstName">
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Nachname</mat-label>
+            <input matInput placeholder="Nachname" formControlName="secondName">
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Telefonnummer</mat-label>
+            <input matInput placeholder="Telefonummer" formControlName="phone">
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Geschlecht</mat-label>
+            <mat-select formControlName="gender">
+              <mat-option *ngFor="let gender of ['weiblich', 'männlich', 'divers']" [value]="gender">
+                {{gender}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Geburtstag</mat-label>
+            <input
+              matInput
+              [matDatepicker]="picker"
+              placeholder="Geburtstag"
+              formControlName="birthdate"
+            >
+            <mat-hint>DD.MM.YYYY</mat-hint>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

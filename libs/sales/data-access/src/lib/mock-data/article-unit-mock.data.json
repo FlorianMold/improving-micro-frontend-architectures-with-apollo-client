@@ -1,0 +1,26 @@
+[
+  {
+    "id": "STK",
+    "nameShort": "Stk",
+    "nameLong": "Stück",
+    "changedAt": 1670566747303,
+    "createdAt": 1655088901163,
+    "deletedAt": null
+  },
+  {
+    "id": "M",
+    "nameShort": "m",
+    "nameLong": "Meter",
+    "changedAt": 1670527208831,
+    "createdAt": 1653745900124,
+    "deletedAt": null
+  },
+  {
+    "id": "KG",
+    "nameShort": "kg",
+    "nameLong": "Kilogramm",
+    "changedAt": 1670570003314,
+    "createdAt": 1649486651007,
+    "deletedAt": null
+  }
+]

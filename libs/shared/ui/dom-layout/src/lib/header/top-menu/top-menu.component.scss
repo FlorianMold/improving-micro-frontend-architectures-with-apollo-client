@@ -1,0 +1,25 @@
+:host.ui-layout-top-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.ui-layout-top-menu-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style-position: inside;
+  padding: 0;
+  margin: 0;
+}
+
+.ui-layout-top-menu-list-item {
+  padding-bottom: 2px;
+  list-style-type: none;
+  cursor: pointer;
+}
+
+.ui-layout-top-menu-nav-link-inner {
+  border-radius: 0;
+  font-size: 0.9rem;
+}

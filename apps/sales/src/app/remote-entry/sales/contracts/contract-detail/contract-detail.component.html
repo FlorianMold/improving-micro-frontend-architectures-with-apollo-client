@@ -1,0 +1,6 @@
+<ui-sales-contract-detail-form
+  [uiContract]="(contract$ | async)?.Contract"
+  [uiCustomerCountries]="(countries$ | async)?.allSalesCountries"
+  (uiCreateContract)="_handleCreateContract($event)"
+  (uiUpdateContract)="_handleUpdateContract($event)"
+></ui-sales-contract-detail-form>

@@ -1,0 +1,82 @@
+[
+  {
+    "id": "1a2d4cef-3035-4d39-9970-37d767e6bd4c",
+    "vat": 83961.52,
+    "vatRemark": "Ab pariatur laudantium ullam a quidem.",
+    "changedAt": 1670582367001,
+    "createdAt": 1644447064481,
+    "deletedAt": null
+  },
+  {
+    "id": "fc030a1d-4465-4374-826f-cbfca2b78cc0",
+    "vat": 47873.69,
+    "vatRemark": "Nobis sed facilis velit.",
+    "changedAt": 1670509312386,
+    "createdAt": 1651299052362,
+    "deletedAt": null
+  },
+  {
+    "id": "062de019-5024-4752-8bd3-3601da6ce13f",
+    "vat": 76049.6,
+    "vatRemark": "Inventore consectetur delectus possimus autem enim ipsa corporis.",
+    "changedAt": 1670541575940,
+    "createdAt": 1642806816230,
+    "deletedAt": null
+  },
+  {
+    "id": "55e68b65-559a-4950-8810-744851069ce8",
+    "vat": 93181.89,
+    "vatRemark": "Totam quo sed rem mollitia deserunt dolores necessitatibus tempora.",
+    "changedAt": 1670554198723,
+    "createdAt": 1656031034506,
+    "deletedAt": null
+  },
+  {
+    "id": "d5238102-5c0e-4264-97cf-f6a7025d6516",
+    "vat": 66068.43,
+    "vatRemark": "Odit velit magnam ullam placeat porro provident voluptatem autem quibusdam.",
+    "changedAt": 1670558509635,
+    "createdAt": 1666171978510,
+    "deletedAt": null
+  },
+  {
+    "id": "43b79f16-724c-427f-9d05-1eb0c7ec3ec0",
+    "vat": 67428.39,
+    "vatRemark": "Voluptas odit et culpa tempora eum aut atque tempore dolorum.",
+    "changedAt": 1670530344722,
+    "createdAt": 1665376818607,
+    "deletedAt": null
+  },
+  {
+    "id": "2914b55a-e56a-4bc1-a272-b20fddf7a9d4",
+    "vat": 63961.06,
+    "vatRemark": "Aliquid at fugiat natus voluptatem ut ipsum minima harum.",
+    "changedAt": 1670576171217,
+    "createdAt": 1641785255486,
+    "deletedAt": null
+  },
+  {
+    "id": "f4accef4-7990-4536-8a18-0e88a184b01e",
+    "vat": 6226.35,
+    "vatRemark": "Iusto eligendi cumque.",
+    "changedAt": 1670590514839,
+    "createdAt": 1644927450961,
+    "deletedAt": null
+  },
+  {
+    "id": "1792145a-cfaa-4305-9b2a-ef8fa852d0b3",
+    "vat": 88165.2,
+    "vatRemark": "Aut quisquam et amet aspernatur veritatis optio minima magnam atque.",
+    "changedAt": 1670529974920,
+    "createdAt": 1667994857785,
+    "deletedAt": null
+  },
+  {
+    "id": "b752fec1-a51a-4983-a9ce-61dc87e72247",
+    "vat": 92404.68,
+    "vatRemark": "Fugiat eos harum necessitatibus sit quo ipsum consequatur et.",
+    "changedAt": 1670555745433,
+    "createdAt": 1661406425618,
+    "deletedAt": null
+  }
+]

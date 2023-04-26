@@ -1,0 +1,60 @@
+<div [formGroup]="customerForm" uiGridRow>
+  <div uiGridCol uiGridColSpan="24">
+    <div class="ui-sub-form-header">
+      <h2>Kunde</h2>
+    </div>
+    <div class="ui-sub-form-main">
+      <div uiGridRow>
+        <div uiGridCol uiGridColSpan="11">
+          <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name">
+          </mat-form-field>
+        </div>
+
+        <div uiGridCol uiGridColOffset="2" uiGridColSpan="11">
+          <mat-form-field>
+            <mat-label>Name2</mat-label>
+            <input matInput formControlName="name2">
+          </mat-form-field>
+        </div>
+      </div>
+      <div uiGridRow>
+        <div uiGridCol uiGridColSpan="11">
+          <mat-form-field>
+            <mat-label>Postleitzahl</mat-label>
+            <input matInput formControlName="postal">
+          </mat-form-field>
+        </div>
+        <div uiGridCol uiGridColOffset="2" uiGridColSpan="11">
+          <mat-form-field>
+            <mat-label>Straße</mat-label>
+            <input matInput formControlName="street">
+          </mat-form-field>
+        </div>
+      </div>
+      <div uiGridRow>
+        <div uiGridCol uiGridColSpan="11">
+          <mat-form-field>
+            <mat-label>Steuernummer</mat-label>
+            <input matInput formControlName="vatNumber">
+          </mat-form-field>
+        </div>
+
+        <div uiGridCol uiGridColOffset="2" uiGridColSpan="11">
+          <mat-form-field>
+            <mat-label>Land</mat-label>
+            <mat-select formControlName="country_id">
+              <mat-option
+                *ngFor="let country of countries"
+                [value]="country.id"
+              >
+                {{country.longName}} ({{country.shortName}})
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

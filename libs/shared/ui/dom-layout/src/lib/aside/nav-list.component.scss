@@ -1,0 +1,13 @@
+:host.ui-layout-nav-list {
+  display: block;
+  margin: 0 2px;
+  max-width: 268px;
+
+  &:first-of-type {
+    margin-top: 16px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 16px;
+  }
+}

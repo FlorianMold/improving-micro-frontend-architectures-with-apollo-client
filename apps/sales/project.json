@@ -1,0 +1,136 @@
+{
+  "name": "sales",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/sales/src",
+  "prefix": "ui-frontend-service",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:webpack-browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/sales",
+        "index": "apps/sales/src/index.html",
+        "main": "apps/sales/src/main.ts",
+        "polyfills": "apps/sales/src/polyfills.ts",
+        "tsConfig": "apps/sales/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": ["apps/sales/src/favicon.ico", "apps/sales/src/assets"],
+        "styles": ["apps/sales/src/styles.scss"],
+        "scripts": [],
+        "stylePreprocessorOptions": {
+          "includePaths": ["libs/shared/ui/common-app-styles/src/styles"]
+        },
+        "customWebpackConfig": {
+          "path": "apps/sales/webpack.config.js"
+        }
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/sales/src/app/core/environment/environment.ts",
+              "with": "apps/sales/src/app/core/environment/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all",
+          "customWebpackConfig": {
+            "path": "apps/sales/webpack.prod.config.js"
+          }
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@nrwl/angular:webpack-dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "sales:build:production"
+        },
+        "development": {
+          "browserTarget": "sales:build:development"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "port": 4201,
+        "publicHost": "http://localhost:4201"
+      }
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "sales:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["apps/sales/**/*.ts", "apps/sales/**/*.html"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/apps/sales"],
+      "options": {
+        "jestConfig": "apps/sales/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "serve-static": {
+      "executor": "@nrwl/angular:file-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "sales:build",
+        "port": 4201
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "sales:build:development"
+        },
+        "production": {
+          "buildTarget": "sales:build:production"
+        }
+      }
+    },
+    "version": {
+      "executor": "@jscutlery/semver:version",
+      "options": {
+        "preset": "angular"
+      }
+    },
+    "compodoc": {
+      "executor": "@twittwer/compodoc:compodoc",
+      "options": {
+        "tsConfig": "apps/sales/tsconfig.editor.json",
+        "outputPath": "dist/compodoc/sales"
+      },
+      "configurations": {
+        "json": {
+          "exportFormat": "json"
+        }
+      }
+    }
+  },
+  "tags": ["scope:app-sales"]
+}

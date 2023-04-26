@@ -1,0 +1,29 @@
+[
+  {
+    "id": "EUR",
+    "shortName": "Euro",
+    "longName": "Euro",
+    "country_id": "AT",
+    "changedAt": 1670509231376,
+    "createdAt": 1640168752339,
+    "deletedAt": null
+  },
+  {
+    "id": "USD",
+    "shortName": "USD",
+    "longName": "US Dollar",
+    "country_id": "US",
+    "changedAt": 1670570142784,
+    "createdAt": 1639929011037,
+    "deletedAt": null
+  },
+  {
+    "id": "GBP",
+    "shortName": "GBP",
+    "longName": "Britischer Pfund",
+    "country_id": "UK",
+    "changedAt": 1670508713379,
+    "createdAt": 1639542202873,
+    "deletedAt": null
+  }
+]

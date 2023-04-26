@@ -1,0 +1,40 @@
+{
+  "name": "sales-data-access",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/sales/data-access/src",
+  "prefix": "ui-sales-data-access",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/libs/sales/data-access"],
+      "options": {
+        "project": "libs/sales/data-access/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/sales/data-access/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/sales/data-access/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/sales/data-access"],
+      "options": {
+        "jestConfig": "libs/sales/data-access/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/sales/data-access/**/*.ts", "libs/sales/data-access/**/*.html"]
+      }
+    }
+  },
+  "tags": ["scope:lib-sales"]
+}

@@ -1,0 +1,8 @@
+package.json
+yarn.json
+/dist
+/coverage
+node_modules
+
+# Do not lint, because it is a fork
+libs/shared/ui/toastr/**

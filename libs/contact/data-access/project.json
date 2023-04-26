@@ -1,0 +1,40 @@
+{
+  "name": "contact-data-access",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/contact/data-access/src",
+  "prefix": "ui",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/libs/contact/data-access"],
+      "options": {
+        "project": "libs/contact/data-access/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/contact/data-access/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/contact/data-access/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/contact/data-access"],
+      "options": {
+        "jestConfig": "libs/contact/data-access/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/contact/data-access/**/*.ts", "libs/contact/data-access/**/*.html"]
+      }
+    }
+  },
+  "tags": ["scope:lib-contact"]
+}

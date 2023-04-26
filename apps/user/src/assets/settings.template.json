@@ -1,0 +1,3 @@
+{
+  "graphQLEndpoint": "${UI_USER_GRAPHQL_URL}"
+}

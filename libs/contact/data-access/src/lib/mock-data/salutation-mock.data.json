@@ -1,0 +1,20 @@
+[
+  {
+    "id": "Herr",
+    "changedAt": 1667907514074,
+    "createdAt": 1664692595112,
+    "deletedAt": null
+  },
+  {
+    "id": "Frau",
+    "changedAt": 1667865362831,
+    "createdAt": 1663753310778,
+    "deletedAt": null
+  },
+  {
+    "id": "Divers",
+    "changedAt": 1667927755817,
+    "createdAt": 1638192082660,
+    "deletedAt": null
+  }
+]

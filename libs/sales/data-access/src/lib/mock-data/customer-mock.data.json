@@ -1,0 +1,122 @@
+[
+  {
+    "id": "38bd7504-5113-4bf3-bd2d-f686f8b95030",
+    "name": "Schönball OHG",
+    "name2": "benchmark efficient niches",
+    "postal": "78945",
+    "street": "An der Kante",
+    "country_id": "AT",
+    "vatNumber": "KEIDKML4",
+    "changedAt": 1670534587589,
+    "createdAt": 1653098059241,
+    "deletedAt": null
+  },
+  {
+    "id": "9d7db302-4829-4e11-be90-a015c22b62d0",
+    "name": "Goldkühle-Dobler",
+    "name2": "cultivate user-centric partnerships",
+    "postal": "75214",
+    "street": "Maurinusstr.",
+    "country_id": "SK",
+    "vatNumber": "UBFFMQ0C",
+    "changedAt": 1670539682288,
+    "createdAt": 1668130011555,
+    "deletedAt": null
+  },
+  {
+    "id": "30e321f2-0185-4c81-9bfd-dbbf5ac351e5",
+    "name": "Hajek, Boxhammer und Grams",
+    "name2": "matrix robust functionalities",
+    "postal": "75591",
+    "street": "Sperberweg",
+    "country_id": "US",
+    "vatNumber": "DXFBTZ4P",
+    "changedAt": 1670576547399,
+    "createdAt": 1654393102515,
+    "deletedAt": null
+  },
+  {
+    "id": "732007f3-7e6b-4308-8686-e4690c6aff34",
+    "name": "Stelkens, Löwa und Lischka",
+    "name2": "reintermediate bleeding-edge relationships",
+    "postal": "20967",
+    "street": "Ehrlichstr.",
+    "country_id": "UK",
+    "vatNumber": "TPVKREVL",
+    "changedAt": 1670589499896,
+    "createdAt": 1641249542154,
+    "deletedAt": null
+  },
+  {
+    "id": "cb0fb91d-5ba6-47c3-a563-5a7b50b0ab5e",
+    "name": "Sürth-Mauroff",
+    "name2": "utilize customized architectures",
+    "postal": "94765",
+    "street": "Peschstr.",
+    "country_id": "AT",
+    "vatNumber": "QUYFTTK6CEU",
+    "changedAt": 1670558318852,
+    "createdAt": 1666738922341,
+    "deletedAt": null
+  },
+  {
+    "id": "df5a7583-e67a-479c-9d27-06250911b795",
+    "name": "Niedermeier, Mayer und Nwachukwu",
+    "name2": "maximize frictionless applications",
+    "postal": "51856",
+    "street": "Am Quettinger Feld",
+    "country_id": "AT",
+    "vatNumber": "XGIACGHL37O",
+    "changedAt": 1670522157858,
+    "createdAt": 1669928405470,
+    "deletedAt": null
+  },
+  {
+    "id": "979a4e15-d94f-4b53-9753-297439f750c9",
+    "name": "Brenner GmbH & Co. KG",
+    "name2": "optimize 24/7 e-commerce",
+    "postal": "25828",
+    "street": "Nachtigallenweg",
+    "country_id": "AT",
+    "vatNumber": "UABDGACIXXX",
+    "changedAt": 1670537146356,
+    "createdAt": 1641475983762,
+    "deletedAt": null
+  },
+  {
+    "id": "10f52d67-3278-466d-ba34-c60dc363980b",
+    "name": "Ritter-Breitenstein",
+    "name2": "strategize holistic vortals",
+    "postal": "39722",
+    "street": "Scheidemannstr.",
+    "country_id": "IT",
+    "vatNumber": "FMTPHK9DXXX",
+    "changedAt": 1670588801406,
+    "createdAt": 1661764532949,
+    "deletedAt": null
+  },
+  {
+    "id": "f86adcc4-dfb1-4b1c-add4-6cc100f21ec0",
+    "name": "Spiegelburg OHG",
+    "name2": "orchestrate sticky models",
+    "postal": "07859",
+    "street": "Friedensstr.",
+    "country_id": "FR",
+    "vatNumber": "QQUMLBJX",
+    "changedAt": 1670544505955,
+    "createdAt": 1654338265587,
+    "deletedAt": null
+  },
+  {
+    "id": "33c64bb1-e5c2-4e23-a863-e9cf552578be",
+    "name": "Koch-Filsinger",
+    "name2": "strategize real-time deliverables",
+    "postal": "30447",
+    "street": "Von-Siebold-Str.",
+    "country_id": "FR",
+    "vatNumber": "YCSASZKVI32",
+    "changedAt": 1670553511262,
+    "createdAt": 1653352262117,
+    "deletedAt": null
+  }
+]

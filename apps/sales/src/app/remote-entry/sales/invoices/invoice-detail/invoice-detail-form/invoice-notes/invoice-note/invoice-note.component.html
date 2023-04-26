@@ -1,0 +1,16 @@
+<ng-container [formGroup]="noteForm">
+  <mat-form-field>
+    <mat-label>Betreff</mat-label>
+    <input matInput formControlName="subject">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Text</mat-label>
+    <textarea
+      class="ui-sales-invoice-note-textarea"
+      matInput
+      formControlName="body"
+      [rows]="5"
+    ></textarea>
+  </mat-form-field>
+</ng-container>

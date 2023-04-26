@@ -1,0 +1,25 @@
+:host.ui-resizeable-handle {
+  position: absolute;
+  user-select: none;
+  z-index: 9;
+  height: 100%;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-width: 0;
+  border-bottom-width: 0;
+  border-style: solid;
+  border-color: white;
+  width: 0.1rem;
+
+  &-right {
+    top: 0;
+    right: -0.125rem;
+    cursor: ew-resize;
+  }
+
+  &-left {
+    top: 0;
+    left: 0.125rem;
+    cursor: ew-resize;
+  }
+}

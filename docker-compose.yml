@@ -1,0 +1,51 @@
+version: '3'
+services:
+  dashboard-react:
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: docker/dashboard-react.Dockerfile
+    ports:
+      - "4299:80"
+    env_file: .env
+  sales:
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: docker/sales.Dockerfile
+    ports:
+      - "4201:80"
+    env_file: .env
+  contact:
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: docker/contact.Dockerfile
+    ports:
+      - "4202:80"
+    env_file: .env
+  dashboard:
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: docker/dashboard.Dockerfile
+    ports:
+      - "4203:80"
+    env_file: .env
+  user:
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: docker/user.Dockerfile
+    ports:
+      - "4204:80"
+    env_file: .env
+  host:
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: docker/host.Dockerfile
+    ports:
+      - "80:80"
+    env_file: .env
+

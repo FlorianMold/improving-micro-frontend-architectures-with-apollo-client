@@ -1,0 +1,22 @@
+[
+  {
+    "id": "700881a3-e091-45c5-80b8-5c5b0e021335",
+    "country_id": "Französisch-Guayana",
+    "location": "Ost Emmely",
+    "postalCode": "22167",
+    "streetName": "Gustav-Radbruch-Str. 26a",
+    "createdAt": 1653571698076,
+    "changedAt": 1671137858758,
+    "deletedAt": null
+  },
+  {
+    "id": "f89859dd-eac6-49ba-8082-6c344638df49",
+    "country_id": "Peru",
+    "location": "Bad Yven",
+    "postalCode": "89488",
+    "streetName": "Theodorstr. 232",
+    "createdAt": 1664414582775,
+    "changedAt": 1671165403819,
+    "deletedAt": null
+  }
+]

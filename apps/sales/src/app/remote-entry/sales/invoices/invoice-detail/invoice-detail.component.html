@@ -1,0 +1,11 @@
+<ui-sales-invoice-detail-form
+  [uiInvoice]="(invoice$ | async)?.Invoice"
+  [uiInvoiceTypes]="(invoiceTypes$ | async)?.allInvoiceTypes"
+  [uiVats]="(vats$ | async)?.allVats"
+  [uiCustomerCountries]="(countries$ | async)?.allSalesCountries"
+  [uiInvoicePositionCountries]="(countries$ | async)?.allSalesCountries"
+  [uiArticleUnits]="(articleUnits$ | async)?.allArticleUnits"
+  (uiCreateInvoice)="_handleCreateInvoice($event)"
+  (uiUpdateInvoice)="_handleUpdateInvoice($event)"
+>
+</ui-sales-invoice-detail-form>

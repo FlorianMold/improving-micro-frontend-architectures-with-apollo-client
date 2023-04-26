@@ -1,0 +1,36 @@
+<mat-toolbar color="accent" class="ui-layout-header-toolbar">
+  <ng-container>
+    <mat-toolbar-row class="ui-layout-toolbar-row">
+      <div class="ui-layout-toolbar-start">
+        <button
+          mat-icon-button
+          class="ui-layout-header-hamburger-menu"
+          title="Main menu"
+          (click)="toggleSideNav()"
+          *ngIf="!toggleButton"
+        >
+          <mat-icon>menu</mat-icon>
+        </button>
+        <a class="ui-layout-nav-link ui-layout-home" routerLink="/">
+          <img class="ui-layout-home-image" *ngIf="_imageUrl" [src]="_imageUrl" title="Home" alt="Home" />
+          <span class="ui-layout-home-text">{{ _appName }}</span>
+        </a>
+      </div>
+      <ng-container *ngIf="_topNavigationNodes$ | async as topNodes">
+        <ui-layout-top-menu [uiLayoutTopNavigationNodes]="topNodes" [uiLayoutCurrentNode]="currentNode"></ui-layout-top-menu>
+      </ng-container>
+      <div class="ui-layout-toolbar-spacer"></div>
+      <ui-layout-top-right-menu>
+        <ng-container *ngIf="_topRightMenu$ | async as topRightMenu">
+          <ng-container [ngTemplateOutlet]="topRightMenu"></ng-container>
+        </ng-container>
+      </ui-layout-top-right-menu>
+    </mat-toolbar-row>
+  </ng-container>
+  <ng-container *ngIf="_secondToolbarRowNavigationNodes | async as toolbarNavigation">
+    <mat-divider></mat-divider>
+    <mat-toolbar-row *ngIf="toolbarNavigation.length > 0" class="ui-layout-toolbar-row">
+      <ui-layout-top-menu [uiLayoutTopNavigationNodes]="toolbarNavigation"></ui-layout-top-menu>
+    </mat-toolbar-row>
+  </ng-container>
+</mat-toolbar>

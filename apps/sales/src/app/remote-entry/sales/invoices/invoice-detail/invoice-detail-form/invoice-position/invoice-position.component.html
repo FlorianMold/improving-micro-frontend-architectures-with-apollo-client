@@ -1,0 +1,77 @@
+<div [formGroup]="invoicePositionForm" uiGridRow>
+  <div uiGridCol uiGridColSpan="24">
+    <div class="ui-sub-form-header">
+      <h2>Position {{index}}</h2>
+    </div>
+    <div class="ui-sub-form-main">
+      <div uiGridRow>
+        <div uiGridCol uiGridColSpan="11">
+          <mat-form-field>
+            <mat-label>ArtikelNr.</mat-label>
+            <input matInput formControlName="articleNumber">
+          </mat-form-field>
+        </div>
+
+        <div uiGridCol uiGridColOffset="2" uiGridColSpan="11">
+          <mat-form-field>
+            <mat-label>Artikelherkunft</mat-label>
+            <input matInput formControlName="articleOrigin">
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div uiGridRow>
+        <div uiGridCol uiGridColSpan="11">
+          <mat-form-field>
+            <mat-label>Artikelseriennummer</mat-label>
+            <input matInput formControlName="articleSerial">
+          </mat-form-field>
+        </div>
+        <div uiGridCol uiGridColOffset="2" uiGridColSpan="11">
+          <mat-form-field>
+            <mat-label>Artikeltext</mat-label>
+            <input matInput formControlName="articleText">
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div uiGridRow>
+        <div uiGridCol uiGridColSpan="11">
+          <mat-form-field>
+            <mat-label>Netto</mat-label>
+            <input matInput type="number" formControlName="net">
+          </mat-form-field>
+        </div>
+        <div uiGridCol uiGridColOffset="2" uiGridColSpan="11">
+          <mat-form-field>
+            <mat-label>Brutto</mat-label>
+            <input matInput type="number" formControlName="brut">
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div uiGridRow>
+        <div uiGridCol uiGridColSpan="11">
+          <mat-form-field>
+            <mat-label>Mehrwertsteuer</mat-label>
+            <mat-select formControlName="vat_id">
+              <mat-option *ngFor="let vat of vats" [value]="vat.id">
+                {{vat.vat}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div uiGridCol uiGridColOffset="2" uiGridColSpan="11">
+          <mat-form-field>
+            <mat-label>Einheit</mat-label>
+            <mat-select formControlName="articleUnit_id">
+              <mat-option *ngFor="let articleUnit of articleUnits" [value]="articleUnit.id">
+                {{articleUnit.nameLong}} ({{articleUnit.nameShort}})
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

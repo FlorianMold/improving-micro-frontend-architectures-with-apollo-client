@@ -1,0 +1,15 @@
+<mat-card class="ui-dashboard-contact-widget-card">
+  <mat-card-header>
+    <mat-card-title>
+      Willkommen {{(user$ | async)?.username}}
+    </mat-card-title>
+    <mat-card-subtitle>
+      Die meist verwendeten Titel:
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="chart-container" style="width: 800px; height: 400px">
+      <canvas id="TitleChart">{{ titleChart }}</canvas>
+    </div>
+  </mat-card-content>
+</mat-card>

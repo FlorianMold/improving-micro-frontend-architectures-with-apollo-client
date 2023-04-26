@@ -1,0 +1,56 @@
+<div class="ui-layout-main">
+  <main class="ui-layout-main-content">
+    <div uiGridRow>
+      <div
+        *ngIf="firstSection"
+        [class.ui-layout-main-space-left]="firstSection"
+        [class.ui-layout-main-space-right]="!secondSection"
+        uiGridCol
+        [uiGridColSpan]="firstColSpan"
+        [uiResizableMinColumn]="_minimumColSpan"
+        [uiResizableMaxColumn]="_gridColumnAmount"
+        uiResizeable
+        (uiResizableResizing)="onFirstResize($event)"
+      >
+        <section class="ui-layout-main-first-section ui-layout-main-resizable">
+          <ng-content select="[uiLayoutMainFirstSection]"></ng-content>
+        </section>
+        <ui-resizeable-handle
+          *ngIf="secondSection && secondColSpan > 0"
+          uiResizeableHandleDirection="right"
+        ></ui-resizeable-handle>
+      </div>
+
+      <div
+        *ngIf="secondSection && secondColSpan > 0"
+        [class.ui-layout-main-space-left]="!firstSection"
+        [class.ui-layout-main-space-right]="!thirdSection"
+        uiGridCol
+        [uiGridColSpan]="secondColSpan"
+        [uiResizableMinColumn]="_minimumColSpan"
+        [uiResizableMaxColumn]="_gridColumnAmount"
+        uiResizeable
+        (uiResizableResizing)="onSecondResize($event)"
+      >
+        <section class="ui-layout-main-second-section ui-layout-main-resizable">
+          <ng-content select="[uiLayoutMainSecondSection]"></ng-content>
+        </section>
+        <ui-resizeable-handle *ngIf="thirdSection && thirdColSpan > 0" uiResizeableHandleDirection="right"></ui-resizeable-handle>
+      </div>
+
+      <div
+        *ngIf="thirdSection && thirdColSpan > 0"
+        [class.ui-layout-main-space-left]="!secondSection"
+        [class.ui-layout-main-space-right]="thirdSection"
+        uiGridCol
+        [uiGridColSpan]="thirdColSpan"
+        uiResizeable
+      >
+        <section class="ui-layout-main-third-section">
+          <ng-content select="[uiLayoutMainThirdSection]"></ng-content>
+        </section>
+      </div>
+    </div>
+    <ng-content></ng-content>
+  </main>
+</div>

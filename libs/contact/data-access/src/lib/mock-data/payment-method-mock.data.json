@@ -1,0 +1,108 @@
+[
+  {
+    "contact_id": "3c316676-6402-45f3-9bc3-dd604e28f3ad",
+    "changedAt": 1667902622838,
+    "createdAt": 1640620042672,
+    "deletedAt": null,
+    "isDefault": false,
+    "id": "e9a525a0-5ee0-45e3-bd49-3a3ab8ee40b7",
+    "accountHolder": "Silja",
+    "iban": "JO44DAIF2432180053669390060352",
+    "bic": "ACCFBB8T",
+    "bankName": "Alizadeh, Allgeyer und Grube",
+    "bankCode": "932693378"
+  },
+  {
+    "contact_id": "3c316676-6402-45f3-9bc3-dd604e28f3ad",
+    "changedAt": 1667914134829,
+    "createdAt": 1661487680637,
+    "deletedAt": null,
+    "isDefault": false,
+    "id": "5087c8cb-d5ab-4abd-8bd8-0ce77a728851",
+    "email": "Fabien.Roos56@hotmail.com"
+  },
+  {
+    "contact_id": "adb22eeb-8582-4ac1-a973-0bfa2f0d4e7c",
+    "changedAt": 1667894605013,
+    "createdAt": 1661349766297,
+    "deletedAt": null,
+    "isDefault": false,
+    "id": "741cbaf2-83d9-4e83-b431-ce599ccdc43a",
+    "accountHolder": "Bent",
+    "iban": "IT34Z02860070086LIK416H21N3",
+    "bic": "MPXWFJ9D",
+    "bankName": "Matthes GmbH & Co. KG",
+    "bankCode": "911226038"
+  },
+  {
+    "contact_id": "4a86c1cd-8fba-4d1a-a866-8980eb00c2eb",
+    "changedAt": 1667893695298,
+    "createdAt": 1655274212987,
+    "deletedAt": null,
+    "isDefault": false,
+    "id": "d8534699-cb2f-42f3-8530-164bb05ff787",
+    "email": "Selim74@hotmail.com"
+  },
+  {
+    "contact_id": "3c316676-6402-45f3-9bc3-dd604e28f3ad",
+    "changedAt": 1667903317038,
+    "createdAt": 1651611343654,
+    "deletedAt": null,
+    "isDefault": false,
+    "id": "c387fe40-6672-42b7-a323-dea8886d0987",
+    "email": "Jim_Schupp11@gmail.com"
+  },
+  {
+    "contact_id": "69ad0db5-96a6-4c37-a9f0-ec6b31035bdd",
+    "changedAt": 1667868600074,
+    "createdAt": 1649859508029,
+    "deletedAt": null,
+    "isDefault": false,
+    "id": "5224af70-f5df-4e67-b301-a57104826874",
+    "accountHolder": "Valeria",
+    "iban": "KW96OQUPZ30U041Y552860449395BM",
+    "bic": "YPSWSMCDXXX",
+    "bankName": "Seitz AG",
+    "bankCode": "489721337"
+  },
+  {
+    "contact_id": "14e5617e-1b1e-4091-868f-f94bbf1a73a9",
+    "changedAt": 1667893695298,
+    "createdAt": 1655274212987,
+    "deletedAt": null,
+    "isDefault": false,
+    "id": "d8534699-cb2f-42f3-8530-164bb05ff787",
+    "email": "Selim74@hotmail.com"
+  },
+  {
+    "contact_id": "3c316676-6402-45f3-9bc3-dd604e28f3ad",
+    "changedAt": 1667857490826,
+    "createdAt": 1660230278458,
+    "deletedAt": null,
+    "isDefault": false,
+    "id": "740e047f-0461-40c7-b487-d32f1e09ad6f",
+    "accountHolder": "Zoey",
+    "iban": "IE44402417500261710022",
+    "bic": "SHOLNENKG18",
+    "bankName": "Simon, Bornscheuer und Taufratshofer",
+    "bankCode": "180308062"
+  },
+  {
+    "contact_id": "dc0abb07-354f-4034-885c-fcb1e063a9d9",
+    "changedAt": 1667903317038,
+    "createdAt": 1651611343654,
+    "deletedAt": null,
+    "isDefault": false,
+    "id": "c387fe40-6672-42b7-a323-dea8886d0987",
+    "email": "Jim_Schupp11@gmail.com"
+  },
+  {
+    "contact_id": "e29d9834-0f2b-439b-8282-0c8af2167d2b",
+    "changedAt": 1667914134829,
+    "createdAt": 1661487680637,
+    "deletedAt": null,
+    "isDefault": false,
+    "id": "5087c8cb-d5ab-4abd-8bd8-0ce77a728851",
+    "email": "Fabien.Roos56@hotmail.com"
+  }
+]

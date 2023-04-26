@@ -1,0 +1,15 @@
+/**
+  Imported from libs/shared/ui/common-app-styles.
+  Setting in project.json:
+    "stylePreprocessorOptions": {
+      "includePaths": ["libs/shared/ui/common-app-styles/src/styles"]
+     },
+ */
+@import 'material/material-custom-theme';
+@import 'material/material-options';
+@import 'common/custom-scrollbar';
+@import 'common/form';
+@import '~normalize.css';
+
+@import 'libs/shared/ui/grid/grid';
+@import 'libs/shared/ui/toastr/src/lib/toastr.scss';

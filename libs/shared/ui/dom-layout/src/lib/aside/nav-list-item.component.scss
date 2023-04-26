@@ -1,0 +1,87 @@
+.ui-layout-vertical-menu-item {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  text-decoration: none;
+  text-align: left;
+  width: 100%;
+  word-wrap: break-word;
+
+  &.ui-layout-navigation-selected {
+    color: blue;
+  }
+
+  & .mat-icon {
+    flex: 0 0 24px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+button.ui-layout-vertical-menu-item {
+  border: none;
+  background-color: transparent;
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+// TODO(FM): Replace with for loop
+.ui-layout-navigation-level-1 {
+  font-size: 1.1rem;
+  line-height: 28px;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.ui-layout-navigation-level-2 {
+  font-size: 1rem;
+  line-height: 24px;
+  padding-left: 36px;
+  margin: 0;
+}
+
+.ui-layout-navigation-level-3 {
+  font-size: 0.9rem;
+  line-height: 24px;
+  padding-left: 44px;
+  margin: 0;
+}
+
+.ui-layout-navigation-collapsed > .mat-icon {
+  transform: rotate(0);
+  transition: transform 0.15s;
+  transition-timing-function: ease-in-out;
+}
+
+.ui-layout-navigation-expanded > .mat-icon {
+  transform: rotate(90deg);
+  transition: transform 0.15s;
+  transition-timing-function: ease-in-out;
+}
+
+.ui-layout-vertical-menu-title {
+  padding-right: 2rem;
+}
+
+.ui-layout-navigation-heading-children {
+  &.ui-layout-navigation-expanded {
+    visibility: visible;
+    opacity: 1;
+    padding-left: 0;
+    transition: visibility 0.5s, opacity 0.5s, max-height 0.5s;
+    transition-timing-function: ease-in-out;
+  }
+
+  &.ui-layout-navigation-collapsed {
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    padding-left: 0;
+    max-height: 1px;
+    transition: visibility 275ms, opacity 275ms, max-height 0.28s;
+    transition-timing-function: ease-out;
+  }
+}

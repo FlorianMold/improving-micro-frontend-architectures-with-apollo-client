@@ -1,0 +1,40 @@
+{
+  "name": "shared-util-functions",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/shared/util/functions/src",
+  "prefix": "util-functions",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/libs/shared/util/functions"],
+      "options": {
+        "project": "libs/shared/util/functions/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/shared/util/functions/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/shared/util/functions/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/shared/util/functions"],
+      "options": {
+        "jestConfig": "libs/shared/util/functions/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/shared/util/functions/**/*.ts", "libs/shared/util/functions/**/*.html"]
+      }
+    }
+  },
+  "tags": ["scope:lib-shared", "scope:lib-shared-util"]
+}

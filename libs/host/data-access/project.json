@@ -1,0 +1,40 @@
+{
+  "name": "host-data-access",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/host/data-access/src",
+  "prefix": "ui-host-data-access",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/libs/host/data-access"],
+      "options": {
+        "project": "libs/host/data-access/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/host/data-access/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/host/data-access/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/host/data-access"],
+      "options": {
+        "jestConfig": "libs/host/data-access/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/host/data-access/**/*.ts", "libs/host/data-access/**/*.html"]
+      }
+    }
+  },
+  "tags": ["scope:lib-host"]
+}

@@ -1,0 +1,10 @@
+:host {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  column-gap: 1rem;
+}
+
+::ng-deep .ui-form-submit-button, ::ng-deep .ui-form-reset-button, ::ng-deep .ui-form-abort-button {
+  min-width: 8rem;
+}

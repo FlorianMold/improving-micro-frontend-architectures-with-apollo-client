@@ -1,0 +1,7 @@
+{
+  "sales": "${UI_HOST_SALES_APP_URL}",
+  "contact": "${UI_HOST_CONTACT_APP_URL}",
+  "dashboard": "${UI_HOST_DASHBOARD_APP_URL}",
+  "dashboard-react": "${UI_HOST_DASHBOARD_REACT_APP_URL}",
+  "user": "${UI_HOST_USER_APP_URL}"
+}

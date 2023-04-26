@@ -1,0 +1,40 @@
+{
+  "name": "shared-feature-logger",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/shared/feature/logger/src",
+  "prefix": "ui-logger",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/libs/shared/feature/logger"],
+      "options": {
+        "project": "libs/shared/feature/logger/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/shared/feature/logger/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/shared/feature/logger/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/shared/feature/logger"],
+      "options": {
+        "jestConfig": "libs/shared/feature/logger/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/shared/feature/logger/**/*.ts", "libs/shared/feature/logger/**/*.html"]
+      }
+    }
+  },
+  "tags": ["scope:lib-shared", "scope:lib-shared-feature"]
+}

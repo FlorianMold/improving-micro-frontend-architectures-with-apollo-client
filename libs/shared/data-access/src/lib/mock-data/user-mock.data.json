@@ -1,0 +1,40 @@
+[
+  {
+    "id": "a3dc3285-0957-4336-8237-99b1b35925fe",
+    "username": "Nele48",
+    "email": "Denise_Schumacher20@hotmail.com",
+    "token": "e316d059-c8c4-4666-8da5-be7011b4fe4c",
+    "password": "iaNfVuyFp36f90a",
+    "phone": "+49-352-7304308",
+    "title": "Fr.",
+    "firstName": "Benjamin",
+    "secondName": "Steidl",
+    "gender": "weiblich",
+    "birthdate": "2022-02-03T01:29:04.422Z",
+    "salutation_id": "Divers",
+    "address_id": "ad86572f-dfd9-4b42-9162-67f1f201e1c5",
+    "title_id": "Bakk.",
+    "changedAt": 1671143643460,
+    "createdAt": 1667477308991,
+    "deletedAt": null
+  },
+  {
+    "id": "3d0f0257-6ca6-43b0-bc61-afc62e123b70",
+    "username": "Luna_Schlawitz35",
+    "email": "Andrea41@gmail.com",
+    "token": "042ab8d7-d50d-46bb-8808-3388662f01ab",
+    "password": "gLPDqgSTvFJvYTX",
+    "phone": "+49-469-7142539",
+    "title": "Fr.",
+    "firstName": "Leyla",
+    "secondName": "Nöh",
+    "gender": "weiblich",
+    "birthdate": "2022-05-03T19:16:29.513Z",
+    "salutation_id": "Divers",
+    "address_id": "de046030-b184-4dbf-97dd-586686580d5e",
+    "title_id": "B. rer. nat.",
+    "changedAt": 1671100476281,
+    "createdAt": 1666488990997,
+    "deletedAt": null
+  }
+]

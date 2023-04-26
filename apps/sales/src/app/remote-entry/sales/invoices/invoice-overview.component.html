@@ -1,0 +1,15 @@
+<ui-layout-main-content
+  [(uiLayoutFirstColSpan)]="_firstColSpan"
+  [(uiLayoutSecondColSpan)]="_secondColSpan"
+>
+  <div uiLayoutMainFirstSection>
+    <router-outlet></router-outlet>
+  </div>
+  <div uiLayoutMainSecondSection>
+    <router-outlet
+      name="detail-outlet"
+      (activate)="handleDetailOutletActivated()"
+      (deactivate)="handleDetailOutletDeactivated()"
+    ></router-outlet>
+  </div>
+</ui-layout-main-content>

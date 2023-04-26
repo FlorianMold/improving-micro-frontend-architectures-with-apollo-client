@@ -1,0 +1,39 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+// Decrease height of mat-form-fields
+.mat-mdc-form-field-infix {
+  min-height: 48px;
+}
+
+.mat-mdc-text-field-wrapper.mdc-text-field--outlined .mat-mdc-form-field-infix {
+  padding-top: 16px;
+  padding-bottom: 12px;
+}
+
+.mat-mdc-text-field-wrapper .mat-mdc-form-field-flex .mat-mdc-floating-label {
+  top: 23px;
+}
+
+.mat-mdc-text-field-wrapper.mdc-text-field--outlined .mdc-notched-outline--upgraded .mdc-floating-label--float-above {
+  --mat-mdc-form-field-label-transform: translateY(-28.75px) scale(var(--mat-mdc-form-field-floating-label-scale, 0.75));
+}
+
+.mat-mdc-select-arrow svg {
+  height: 18px;
+}
+
+.mat-mdc-select-arrow-wrapper {
+  max-height: 18px;
+}
+
+// Decrease height of mat-rows
+.mat-mdc-table .mdc-data-table__row {
+  height: 48px;
+}

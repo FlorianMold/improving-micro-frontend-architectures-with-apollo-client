@@ -1,0 +1,24 @@
+:host {
+  display: block;
+  height: 100%;
+}
+
+.ui-dashboard-sales-widget-card {
+  height: inherit;
+}
+
+.ui-dashboard-sales-widget-spacer {
+  margin-top: 2rem;
+}
+
+.ui-dashboard-sales-widget-mat-list {
+  max-height: 400px;
+  overflow: auto;
+
+  &-item {
+    &:hover {
+      background-color: grey;
+      border-color: currentColor;
+    }
+  }
+}
